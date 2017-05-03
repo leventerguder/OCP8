@@ -16,6 +16,6 @@ public class StreamFindAnyFindFirst {
 		System.out.println(any);
 
 		String first = list.stream().findFirst().get();
-
+		System.out.println(first);
 	}
 }
