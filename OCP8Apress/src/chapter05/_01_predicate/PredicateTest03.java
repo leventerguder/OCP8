@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
 
-public class _03_RemoveIfTest {
+public class PredicateTest03 {
 
 	// the removeIf() method added in the Collection interface in Java 8
 	// default boolean removeIf(Predicate<? super E> filter)

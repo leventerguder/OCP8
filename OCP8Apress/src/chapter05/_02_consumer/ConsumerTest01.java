@@ -2,7 +2,7 @@ package chapter05._02_consumer;
 
 import java.util.stream.Stream;
 
-public class _01_ConsumerTest {
+public class ConsumerTest01 {
 
 	public static void main(String[] args) {
 		Stream.of("hello", "world", "injavawetrust").forEach(System.out::println);

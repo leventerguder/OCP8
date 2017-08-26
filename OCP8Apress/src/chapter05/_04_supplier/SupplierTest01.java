@@ -4,7 +4,7 @@ import java.util.Random;
 import java.util.function.Supplier;
 import java.util.stream.Stream;
 
-public class _01_SupplierTest {
+public class SupplierTest01 {
 
 	public static void main(String[] args) {
 		Random random = new Random();

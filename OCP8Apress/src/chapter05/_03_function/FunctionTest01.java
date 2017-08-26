@@ -2,7 +2,7 @@ package chapter05._03_function;
 
 import java.util.Arrays;
 
-public class _01_FunctionTest {
+public class FunctionTest01 {
 
 	public static void main(String[] args) {
 		Arrays.stream("4,-9,16".split(",")).map(Integer::parseInt).map(i -> i < 0 ? -i : i)

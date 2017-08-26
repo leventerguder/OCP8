@@ -2,7 +2,7 @@ package chapter05._03_function;
 
 import java.util.function.Function;
 
-public class _02_FunctionTest {
+public class FunctionTest02 {
 
 	public static void main(String[] args) {
 		Function<String, Integer> strLength = str -> str.length();

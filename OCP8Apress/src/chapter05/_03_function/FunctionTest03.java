@@ -3,7 +3,7 @@ package chapter05._03_function;
 import java.util.Arrays;
 import java.util.function.Function;
 
-public class _03_FunctionTest {
+public class FunctionTest03 {
 
 	public static void main(String[] args) {
 

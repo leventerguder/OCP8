@@ -3,7 +3,7 @@ package chapter05._03_function;
 import java.util.Arrays;
 import java.util.function.Function;
 
-public class _04_FunctionTest {
+public class FunctionTest04 {
 
 	public static void main(String[] args) {
 		Arrays.stream("4,-9,16".split(",")).map(Function.identity()).forEach(System.out::println);

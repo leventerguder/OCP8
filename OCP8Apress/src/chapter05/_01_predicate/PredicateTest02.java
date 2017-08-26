@@ -2,7 +2,7 @@ package chapter05._01_predicate;
 
 import java.util.function.Predicate;
 
-public class _02_PredicateTest {
+public class PredicateTest02 {
 
 	public static void main(String[] args) {
 		Predicate<String> nullCheck = arg -> arg != null;

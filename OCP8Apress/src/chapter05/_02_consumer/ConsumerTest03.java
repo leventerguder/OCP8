@@ -3,7 +3,7 @@ package chapter05._02_consumer;
 import java.util.function.Consumer;
 import java.util.stream.Stream;
 
-public class _03_ConsumerTest {
+public class ConsumerTest03 {
 
 	public static void main(String[] args) {
 		Stream<String> strings = Stream.of("hello", "world", "injavawetrust.com");
