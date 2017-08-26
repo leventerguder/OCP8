@@ -3,7 +3,7 @@ package chapter05._04_supplier;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
-public class _03_ConstructorTest {
+public class SupplierTest03 {
 
 	public static void main(String[] args) {
 		Supplier<String> newString = String::new; // public String()
