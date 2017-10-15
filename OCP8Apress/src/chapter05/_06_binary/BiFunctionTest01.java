@@ -17,8 +17,22 @@ public class BiFunctionTest01 {
 		System.out.println(compares.apply(10.5, 2.5));
 		System.out.println(compares2.apply(10.5, 2.5));
 
+		//burada kendi tipinde parametre aliyorsa metot , bu durumda bu sekilde kullanabiliyoruz. ilginc.
+		//bu metot static olmasina gerek yok.
+		BiFunction<BiFunctionTest01, BiFunctionTest01, Integer> testCompare = BiFunctionTest01::compareTo;
+		
+		BiFunction<Double,Double,Integer> bif1 = new BiFunctionTest01()::testMethod;
 	}
 
+	private final double value = 1;
+
+	public int compareTo(BiFunctionTest01 anotherDouble) {
+		return Double.compare(value, 1);
+	}
+
+	public int testMethod(Double a, Double b) {
+		return Double.compare(value, 1);
+	}
 }
 
 // public interface Function<T,R>{

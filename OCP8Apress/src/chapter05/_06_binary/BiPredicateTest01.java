@@ -10,6 +10,7 @@ public class BiPredicateTest01 {
 	
 		System.out.println();
 		BiPredicate<List<Integer>, Integer> listContains = List::contains;
+		BiPredicate<List<Integer>, Integer> listContains2 = (List<Integer> list , Integer i) -> list.contains(i);
 		
 		Predicate<Object>  co = BiPredicateTest01::contains;
 		//
@@ -20,7 +21,7 @@ public class BiPredicateTest01 {
 	static boolean contains(Object o)  {
 		return true;
 	}
-	static boolean containsTwo(Object o, Object o2)  {
+	static boolean containsTwo(List<Integer> o, Integer o2)  {
 		return true;
 	}
 }

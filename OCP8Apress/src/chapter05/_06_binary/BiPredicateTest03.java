@@ -8,6 +8,7 @@ import java.util.function.BiPredicate;
 public class BiPredicateTest03 {
 
 	public static void main(String[] args) {
+		//
 		List<Integer> list = Arrays.asList(1, 2, 3);
 
 		// defining (bi)predicates using explicit parameters
