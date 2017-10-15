@@ -9,6 +9,23 @@ public class ConsumerTest03 {
 		Stream<String> strings = Stream.of("hello", "world", "injavawetrust.com");
 		Consumer<String> consumer = System.out::println;
 		strings.forEach(consumer);
+		
+		//
+		Consumer<String> consumer2 = ConsumerTest03::staticMethod;
+		
+		//Consumer<String> consumer3 = staticVar::staticMethod; //compiler error
+		
+		Consumer<String> consumer4 = staticVar::method; //OK
+	}
+	
+	private static ConsumerTest03 staticVar;
+	
+	public static void staticMethod(String s){
+		System.out.println(s.toUpperCase());
+	}
+	
+	public void method(String s){
+		System.out.println(s.toUpperCase());
 	}
 }
 
