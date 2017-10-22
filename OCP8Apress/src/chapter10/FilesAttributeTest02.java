@@ -16,6 +16,7 @@ public class FilesAttributeTest02 {
 		System.out.println(fa.lastAccessTime());
 		System.out.println(fa.creationTime());
 		System.out.println(fa.isRegularFile());
+		System.out.println(fa.getClass());
 		
 		//
 		PosixFileAttributes pfa = Files.readAttributes(path, PosixFileAttributes.class);
