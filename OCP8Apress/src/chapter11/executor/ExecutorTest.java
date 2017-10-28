@@ -6,7 +6,7 @@ import java.util.concurrent.Executor;
 
 class Task implements Runnable {
 	public void run() {
-		System.out.println("Calling Task.run() ");
+		System.out.println("Calling Task.run() " + Thread.currentThread().getName());
 	}
 }
 
@@ -36,9 +36,10 @@ class RepeatedExecutor implements Executor {
 class ExecutorTest {
 	public static void main(String[] args) {
 		Runnable runnable = new Task();
-		System.out.println("Calling Task.run() by directly creating a Thread");
-		Thread thread = new Thread(runnable);
-		thread.start();
+//		System.out.println("Calling Task.run() by directly creating a Thread");
+//		Thread thread = new Thread(runnable);
+//		thread.start();
+		
 		RepeatedExecutor executor = new RepeatedExecutor();
 		executor.execute(runnable, 3);
 	}
