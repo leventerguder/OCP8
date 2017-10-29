@@ -20,6 +20,8 @@ public class Example06 {
 		//if we remove some if the type information from previous example
 		//compile error
 		//BinaryOperator compileError = (x,y) -> x+y;
-
-	}
+		
+		//x ,y java.lang.Object type
+		BinaryOperator bo = (x,y) -> 0;
+ 	}
 }
