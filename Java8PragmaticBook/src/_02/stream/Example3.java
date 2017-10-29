@@ -8,10 +8,11 @@ import java.util.stream.Stream;
 public class Example3 {
 
 	public static void main(String[] args) {
-		Predicate<String> p = (String str) -> str.charAt(0)=='1';
-		
-		List<String> beginningWithNumber= Stream.of("a","1abc","abc1").filter(p).collect(Collectors.toList());
-		
+
+		Predicate<String> p = (String str) -> str.charAt(0) == '1';
+
+		List<String> beginningWithNumber = Stream.of("a", "1abc", "abc1").filter(p).collect(Collectors.toList());
+
 		System.out.println(beginningWithNumber);
 
 	}
