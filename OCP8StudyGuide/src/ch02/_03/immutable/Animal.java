@@ -1,4 +1,4 @@
-package ch02._03_.immutable;
+package ch02._03.immutable;
 
 import java.util.ArrayList;
 import java.util.Collections;
