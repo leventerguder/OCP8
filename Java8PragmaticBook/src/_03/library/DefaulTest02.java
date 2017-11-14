@@ -1,4 +1,4 @@
-package _05.defaults;
+package _03.library;
 
 interface Cool {
 	
@@ -17,7 +17,7 @@ class SubCool implements Cool {
 }
 
 
-public class DefaulTest {
+public class DefaulTest02 {
 
 	public static void main(String[] args) {
 		Cool cool = new SubCool();
