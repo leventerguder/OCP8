@@ -1,11 +1,7 @@
-package _04.advanced;
+package _00.data;
 
 import java.util.Arrays;
 import java.util.List;
-
-import _00.data.Album;
-import _00.data.Artist;
-import _00.data.Track;
 
 public class DataExample {
 
