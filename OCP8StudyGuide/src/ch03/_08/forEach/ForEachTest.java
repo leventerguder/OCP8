@@ -1,4 +1,4 @@
-package ch03;
+package ch03._08.forEach;
 
 import java.util.Arrays;
 import java.util.List;

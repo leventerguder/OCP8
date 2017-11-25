@@ -1,4 +1,4 @@
-package ch03;
+package ch03._03.collections;
 
 import java.util.TreeSet;
 

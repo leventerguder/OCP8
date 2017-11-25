@@ -1,4 +1,4 @@
-package ch03;
+package ch03._06.removeIf;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,6 +6,7 @@ import java.util.List;
 public class RemoveIfTest {
 
 	public static void main(String[] args) {
+		
 		// boolean removeIf(Predicate<? super E> filter)
 		//
 		List<String> list = new ArrayList<>();

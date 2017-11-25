@@ -1,4 +1,4 @@
-package ch03;
+package ch03._07.replaceAll;
 
 import java.util.Arrays;
 import java.util.List;

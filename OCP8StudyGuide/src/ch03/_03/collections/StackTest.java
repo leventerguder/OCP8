@@ -1,4 +1,4 @@
-package ch03;
+package ch03._03.collections;
 
 import java.util.Stack;
 
@@ -14,5 +14,10 @@ public class StackTest {
 		
 		System.out.println(stack);
 		System.out.println(stack.pop());
+		System.out.println(stack.pop());
+		System.out.println(stack.peek());
+		System.out.println(stack.peek());
 	}
 }
+
+// 
