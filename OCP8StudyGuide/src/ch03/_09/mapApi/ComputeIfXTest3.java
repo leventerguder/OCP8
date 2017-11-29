@@ -1,4 +1,4 @@
-package ch03;
+package ch03._09.mapApi;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -22,6 +22,8 @@ public class ComputeIfXTest3 {
 
 		// The call to computeIfPresent() removes the key from the map. The call
 		// to computeIfAbsent() doesn’t add a key.
+		
+		System.out.println(counts);
 	}
 
 }

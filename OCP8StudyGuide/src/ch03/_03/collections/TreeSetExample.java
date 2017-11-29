@@ -9,6 +9,7 @@ public class TreeSetExample {
 		tree.add("one");
 		tree.add("One");
 		tree.add("ONE");
+		System.out.println(tree);
 		System.out.println(tree.ceiling("On"));
 		System.out.println(tree.ceiling("One"));
 		System.out.println(tree.higher("On"));

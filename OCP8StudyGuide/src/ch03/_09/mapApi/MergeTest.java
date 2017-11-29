@@ -9,7 +9,7 @@ public class MergeTest {
 
 	public static void main(String[] args) {
 
-		BiFunction<String, String, String> mapper = (v1, v2) -> v1.length() > v2.length() ? v1 : v2;
+		BiFunction<String, String, String> mapper = (v1, v2) -> v1.length() > v2.length() ? v1 + " new" : v2 + " new";
 		//
 		Map<String, String> favorites = new HashMap<>();
 		//
@@ -19,8 +19,8 @@ public class MergeTest {
 		//
 		//
 
-		// default V merge(K key, V value, BiFunction<? super V, ? super V, ?
-		// extends V> remappingFunction)
+		// default V merge(K key, V value, BiFunction<? super V, ? super V, ? extends V> remappingFunction)
+		//
 		String jenny = favorites.merge("Jenny", "Skyride", mapper);
 		System.out.println(jenny);
 
@@ -34,11 +34,11 @@ public class MergeTest {
 
 		// Notice that the mapping function isn’t called. If it were, we’d have
 		// a NullPointerException. The mapping function is used only when there
-		// are two actual val- ues to decide between.
-		
+		// are two actual values to decide between.
+
 		String noKey = favorites.merge("NoKey", "NotNull", mapper);
 		System.out.println(noKey);
-		
+
 		System.out.println(favorites);
 		// {NoKey=NotNull, Tom=Skyride, Jenny=Bus Tour, Jack=NotNull}
 		// Bus Tour

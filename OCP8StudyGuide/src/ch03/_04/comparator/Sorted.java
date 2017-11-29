@@ -1,8 +1,9 @@
-package ch03;
+package ch03._04.comparator;
 
 import java.util.*;
 
 public class Sorted implements Comparable<Sorted>, Comparator<Sorted> {
+	//
 	private int num;
 	private String text;
 
@@ -15,10 +16,12 @@ public class Sorted implements Comparable<Sorted>, Comparator<Sorted> {
 		return "" + num;
 	}
 
+	// Comparable
 	public int compareTo(Sorted s) {
 		return text.compareTo(s.text);
 	}
 
+	// Comparator
 	public int compare(Sorted s1, Sorted s2) {
 		return s1.num - s2.num;
 	}
@@ -29,12 +32,15 @@ public class Sorted implements Comparable<Sorted>, Comparator<Sorted> {
 		TreeSet<Sorted> t1 = new TreeSet<>();
 		t1.add(s1);
 		t1.add(s2);
-		
+
 		System.out.println(t1);
-		
-//		TreeSet<Sorted> t2 = new TreeSet<>(s1);
-//		t2.add(s1);
-//		t2.add(s2);
-//		System.out.println(t1 + " " + t2);
+		// Compararable
+
+		TreeSet<Sorted> t2 = new TreeSet<>(s1);
+		t2.add(s1);
+		t2.add(s2);
+
+		System.out.println(t2);
+		// Comparator
 	}
 }

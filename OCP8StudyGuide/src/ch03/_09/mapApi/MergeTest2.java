@@ -13,12 +13,12 @@ public class MergeTest2 {
 		favorites.put("Tom", "Bus Tour");
 		//
 		BiFunction<String, String, String> mapper = (v1, v2) -> null;
-		
+
 		// Jenny was removed because the mapping function returned null.
 
 		favorites.merge("Jenny", "Skyride", mapper);
 		favorites.merge("Sam", "Skyride", mapper);
-		
+
 		System.out.println(favorites);
 	}
 }

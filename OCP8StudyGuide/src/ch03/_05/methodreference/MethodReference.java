@@ -23,8 +23,9 @@ public class MethodReference {
 		// parameters. Java uses the parameter supplied at runtime as the
 		// instance on which the method is called.
 
-		// public boolean startsWith(String prefix
+		// public boolean startsWith(String prefix)
 
+		// public boolean isEmpty() 
 		Predicate<String> mf2 = String::isEmpty;
 		Predicate<String> lambda2 = s -> s.isEmpty();
 
