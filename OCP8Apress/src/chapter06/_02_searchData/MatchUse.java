@@ -13,5 +13,10 @@ public class MatchUse {
 		//
 		boolean noneMatch = IntStream.of(-56, -57, -52, -48, -51, -49).noneMatch(temp -> temp > 0);
 		System.out.println("noneMatch : " + noneMatch);
+		
+		System.out.println("empty check");
+		System.out.println(IntStream.of().anyMatch(temp -> temp >0));
+		System.out.println(IntStream.of().allMatch(temp -> temp >0));
+		System.out.println(IntStream.of().noneMatch(temp -> temp >0));
 	}
 }
