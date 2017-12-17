@@ -1,5 +1,6 @@
 package ch04._02.builtInFunctionalInterfaces;
 
+import java.util.function.BiFunction;
 import java.util.function.BiPredicate;
 
 public class BiPredicateTest {
@@ -17,6 +18,8 @@ public class BiPredicateTest {
 		// public boolean contains(CharSequence s)
 		BiPredicate<String, String> b3 = String::contains;
 
+		BiFunction<String, String, Boolean> f1 = String :: contains;
+		
 		System.out.println(b3.test("java", "v"));
 		
 		//

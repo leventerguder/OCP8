@@ -12,5 +12,8 @@ public class BiFunctionTest {
 		//
 		System.out.println(b1.apply("injava", "wetrust"));
 		System.out.println(b2.apply("injava", "wetrust"));
+		
+		// public boolean contains(CharSequence s)
+		BiFunction<String, String, Boolean> f1 = String :: contains;
 	}
 }
