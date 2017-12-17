@@ -2,6 +2,7 @@ package chapter06._03_optional;
 
 import java.util.Locale;
 import java.util.Optional;
+import java.util.function.BiFunction;
 import java.util.function.Function;
 import java.util.stream.Stream;
 
@@ -17,6 +18,7 @@ public class OptionalTest05 {
 
 		Function<String, String> str1 = String::toUpperCase;
 		Function<Locale, String> str2 = new String()::toLowerCase;
+		BiFunction<String,Locale, String> str3 = String::toLowerCase;
 
 		System.out.print(string.map(String::toUpperCase).orElse("dummy"));
 	}

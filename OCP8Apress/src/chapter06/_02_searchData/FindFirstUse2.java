@@ -10,5 +10,10 @@ public class FindFirstUse2 {
 				.findFirst();
 		System.out.println(temperature);
 		System.out.println(temperature.getAsDouble());
+		
+		OptionalDouble temperature2 = DoubleStream.of(-10.1, -5.4, 6.0, -3.8, 8.9, 2.2).filter(temp -> temp > 0)
+				.findAny();
+		System.out.println(temperature2);
+		System.out.println(temperature2.getAsDouble());
 	}
 }
