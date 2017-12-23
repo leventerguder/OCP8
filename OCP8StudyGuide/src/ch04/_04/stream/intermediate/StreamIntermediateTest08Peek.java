@@ -1,4 +1,4 @@
-package ch04._05.stream.intermediate;
+package ch04._04.stream.intermediate;
 
 import java.util.ArrayList;
 import java.util.List;

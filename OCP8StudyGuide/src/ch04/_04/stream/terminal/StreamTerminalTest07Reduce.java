@@ -1,4 +1,4 @@
-package ch04._05.stream.terminal;
+package ch04._04.stream.terminal;
 
 import java.util.stream.Stream;
 

@@ -1,4 +1,4 @@
-package ch04._05.stream.creating;
+package ch04._04.stream.creating;
 
 import java.util.Arrays;
 import java.util.List;
