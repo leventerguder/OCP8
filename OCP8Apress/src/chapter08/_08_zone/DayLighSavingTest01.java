@@ -20,13 +20,16 @@ public class DayLighSavingTest01 {
 		ZoneId aucklandZone = ZoneId.of("Pacific/Auckland");
 		Duration aucklandDST = aucklandZone.getRules().getDaylightSavings(Instant.now());
 		System.out.printf("Auckland zone DST is: %d hours", aucklandDST.toHours());
-
+		
+		System.out.println();
+		
 		Set<String> zones = ZoneId.getAvailableZoneIds();
  
 		Consumer<String> consumer = (String zoneId) ->  {
 			ZoneId zone = ZoneId.of("Pacific/Auckland");
 			Duration dst = zone.getRules().getDaylightSavings(Instant.now());
 			System.out.printf(zoneId + "zone DST is: %d hours", dst.toHours());
+			System.out.println();
 		};
 		zones.forEach(consumer);
 	}
