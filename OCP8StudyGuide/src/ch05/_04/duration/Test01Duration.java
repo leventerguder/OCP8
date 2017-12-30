@@ -6,6 +6,7 @@ public class Test01Duration {
 
 	public static void main(String[] args) {
 		Duration daily = Duration.ofDays(1); // PT24H
+		Duration _360 = Duration.ofDays(360); // PT8640H
 		Duration hourly = Duration.ofHours(1); // PT1H
 		Duration everyMinute = Duration.ofMinutes(1); // PT1M
 		Duration _60Minute = Duration.ofMinutes(60); // PT1H
@@ -19,6 +20,8 @@ public class Test01Duration {
 		// H
 		// M
 		// S
+		System.out.println(daily);
+		System.out.println(_360);
 		System.out.println(_60Minute);
 		System.out.println(_61Minute);
 		System.out.println(anHour);
