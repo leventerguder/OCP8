@@ -1,9 +1,9 @@
-package chapter13.listResourceBundle;
+package chapter13.candidate;
 
 import java.util.ListResourceBundle;
 
 //Italian version
-public class ResBundle_it_IT extends ListResourceBundle {
+public class Candidate_it_IT extends ListResourceBundle {
 	public Object[][] getContents() {
 		return contents;
 	}

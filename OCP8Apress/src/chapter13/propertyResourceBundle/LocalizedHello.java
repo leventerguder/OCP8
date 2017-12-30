@@ -5,10 +5,13 @@ import java.util.ResourceBundle;
 
 public class LocalizedHello {
 	public static void main(String args[]) {
-		Locale.setDefault(new Locale("tr","TR"));
-		Locale currentLocale = Locale.getDefault();
 		
-		ResourceBundle resBundle = ResourceBundle.getBundle("chapter13.propertyResourceBundle.myResource", currentLocale);
-		System.out.printf(resBundle.getString("hello.message"));
+		Locale.setDefault(new Locale("tr", "TR"));
+		Locale currentLocale = Locale.getDefault();
+
+		ResourceBundle resBundle = ResourceBundle.getBundle("chapter13.propertyResourceBundle.myResource",
+				currentLocale);
+		System.out.println(resBundle.getString("hello.message"));
+		System.out.println(resBundle.getObject("hello.message"));
 	}
 }

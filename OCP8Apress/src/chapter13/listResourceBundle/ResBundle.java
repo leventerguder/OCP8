@@ -10,6 +10,6 @@ public class ResBundle extends ListResourceBundle {
 
 	static final Object[][] contents = 
 			{ { "MovieName", "Avatar" }, 
-			{ "GrossRevenue", (Long) 2782275172L },
-			{ "Year", (Integer) 2009 } };
+			{ "GrossRevenue", 2782275172L },
+			{ "Year", 2009 } };
 }
