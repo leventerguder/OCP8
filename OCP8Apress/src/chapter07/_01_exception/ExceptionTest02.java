@@ -1,9 +1,7 @@
 package chapter07._01_exception;
 
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.sql.SQLException;
 
 public class ExceptionTest02 {
 
@@ -20,5 +18,9 @@ public class ExceptionTest02 {
 		// phase, hence the throws clause of the constructor can be used for
 		// declaring the checked exceptions that a non-static initialization
 		// block can throw.
+	}
+
+	public ExceptionTest02(int a) throws IOException {
+
 	}
 }

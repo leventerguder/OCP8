@@ -15,12 +15,12 @@ public class TryWithResourceTest01 {
 
 		try (FileReader fr = new FileReader("test.txt"); FileWriter fw = new FileWriter("test.txt");) {
 			// You can use more than one resource in a try-with-resources
-			// statement.
+			
+			//fr = new FileReader("compiler errror!");
+			//You cannot assign to the resource variables declared in the try-with-resources within the body of the try-with-resources statement
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}// . If the resource is explicitly closed in the try block, then calling
