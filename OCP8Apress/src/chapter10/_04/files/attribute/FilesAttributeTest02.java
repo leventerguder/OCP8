@@ -1,4 +1,4 @@
-package chapter10;
+package chapter10._04.files.attribute;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -21,7 +21,8 @@ public class FilesAttributeTest02 {
 		//
 		PosixFileAttributes pfa = Files.readAttributes(path, PosixFileAttributes.class);
 		System.out.println(pfa.owner());
-		
+		System.out.println(pfa.group());
+		System.out.println(pfa.permissions());
 		//DosFileAttributes dfa = Files.readAttributes(path,DosFileAttributes.class);
 		//error in unix system
 	}

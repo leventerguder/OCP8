@@ -1,4 +1,4 @@
-package chapter10;
+package chapter10._05.copy;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -18,5 +18,11 @@ public class FilesCopyTest01 {
 		// When you try copying the file for the second time, you get a
 		// FileAlreadyExistsException because the destination file already
 		// exists.
+
+		// The copy methods cannot copy a non-empty directory. If you attempt to
+		// copy a non-empty directory using the copy methods, only the name of
+		// the target directory is created, not its sub files and directories.
+
+		// http://www.codejava.net/java-se/file-io/java-nio-copy-file-or-directory-examples
 	}
 }
