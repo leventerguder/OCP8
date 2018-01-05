@@ -1,4 +1,4 @@
-package chapter10;
+package chapter10._01.path;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -12,5 +12,6 @@ public class PathTest02 {
 		System.out.println(path.toAbsolutePath());
 		System.out.println(path.getRoot());
 		System.out.println(path.normalize());
+		System.out.println(path.toAbsolutePath().normalize());
 	}
 }

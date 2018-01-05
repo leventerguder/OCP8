@@ -1,0 +1,6 @@
+test output to System.out
+added4
+-53
+-2
+-70
+-66
