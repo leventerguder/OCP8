@@ -1,4 +1,4 @@
-package chapter10.stream;
+package chapter10._08.stream;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -9,7 +9,7 @@ import java.util.function.BiPredicate;
 import java.util.stream.Stream;
 
 
-public class FindFilesTest01 {
+public class Test04FilesFind {
 
 	public static void main(String[] args) throws IOException {
 		

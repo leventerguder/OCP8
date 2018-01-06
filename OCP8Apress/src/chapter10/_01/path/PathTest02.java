@@ -13,5 +13,6 @@ public class PathTest02 {
 		System.out.println(path.getRoot());
 		System.out.println(path.normalize());
 		System.out.println(path.toAbsolutePath().normalize());
+		System.out.println(path.isAbsolute());
 	}
 }
