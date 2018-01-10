@@ -11,5 +11,8 @@ public class AtomicTest02 {
 		System.out.println(ai.addAndGet(5));
 		System.out.println(ai.getAndAdd(5));
 		System.out.println(ai);
+		
+		System.out.println(ai.compareAndSet(22, 1000));
+		System.out.println(ai);
 	}
 }
