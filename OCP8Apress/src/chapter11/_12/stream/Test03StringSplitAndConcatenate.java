@@ -1,4 +1,4 @@
-package chapter11.stream;
+package chapter11._12.stream;
 
 import java.util.Arrays;
 
@@ -10,7 +10,7 @@ class StringConcatenator {
 	}
 }
 
-class StringSplitAndConcatenate {
+class Test03StringSplitAndConcatenate {
 	public static void main(String[] args) {
 		String words[] = "the quick brown fox jumps over the lazy dog".split(" ");
 		Arrays.stream(words).forEach(StringConcatenator::concatStr);
