@@ -9,7 +9,7 @@ public class Test02ScheduledExecutorService {
 	public static void main(String[] args) {
 
 		ScheduledExecutorService service = Executors.newScheduledThreadPool(10);
-		service.scheduleAtFixedRate(() -> System.out.println("test message"), 3, 2, TimeUnit.SECONDS);
+		service.scheduleAtFixedRate(() -> System.out.println("test message"), 3, 5, TimeUnit.SECONDS);
 
 		// public ScheduledFuture<?> scheduleAtFixedRate(Runnable command,
 		// long initialDelay,
