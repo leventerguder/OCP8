@@ -7,17 +7,23 @@ import java.nio.file.Paths;
 public class PathTest01 {
 
 	public static void main(String[] args) {
-		Path path = Paths.get("/folder/folder2/test.txt");
-		
+
+		Path path = Paths.get("/folder/folder2/folder3/test.txt");
+		//
 		System.out.println(path);
-		System.out.println(path.getFileName());
-		System.out.println(path.getRoot());
-		System.out.println(path.getParent());
+		System.out.println("getFileName() : " + path.getFileName());
+		System.out.println("getRoot(): " + path.getRoot());
+		System.out.println("getParent() : " + path.getParent());
+		System.out.println("getNameCount() : " + path.getNameCount());
+		System.out.println("getName(0) : " + path.getName(0));
+		System.out.println("subpath () : " + path.subpath(1, 4));
+
+		System.out.println("getClass() : " + path.getClass());
+		System.out.println("getFileSystem() : " + path.getFileSystem());
 		
-		System.out.println(path.getClass());
+		System.out.println("File.pathSeparator : " +  File.pathSeparator);
+		System.out.println("File.separator : " +  File.separator);
 		
-		System.out.println(File.pathSeparator);
-		System.out.println(System.getProperty("path.separator"));
-		System.out.println(File.separator);
+		System.out.println("System.getProperty : " + System.getProperty("path.separator"));		
 	}
 }
