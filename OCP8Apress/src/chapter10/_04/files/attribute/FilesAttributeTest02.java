@@ -7,10 +7,15 @@ import java.nio.file.Paths;
 import java.nio.file.attribute.BasicFileAttributes;
 //import java.nio.file.attribute.DosFileAttributes;
 import java.nio.file.attribute.PosixFileAttributes;
+import java.util.Map;
 
 public class FilesAttributeTest02 {
 	public static void main(String[] args) throws IOException {
 		Path path = Paths.get("log.txt");
+		
+		Map<String, Object> map = Files.readAttributes(path, "*");
+		System.out.println(map);
+		
 		BasicFileAttributes fa = Files.readAttributes(path, BasicFileAttributes.class);
 		System.out.println(fa.isDirectory());
 		System.out.println(fa.lastAccessTime());
