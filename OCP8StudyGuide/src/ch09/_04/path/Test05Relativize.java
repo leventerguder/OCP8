@@ -25,12 +25,21 @@ public class Test05Relativize {
 		// relative, and it will throw an IllegalArgumentException if a relative
 		// path value is mixed with an absolute path value. For example, the
 		// following would throw an exception at runtime:
-		
+
 		// Path path5 = Paths.get("/primate/chimpanzee");
 		// Path path6 = Paths.get("bananas.txt");
 		// path5.relativize(path6);
 		// THROWS EXCEPTION AT RUNTIME
 
 		// java.lang.IllegalArgumentException
+
+		// On Windows-based systems, it also requires that if absolute paths are
+		// used, then both paths must have the same root directory or drive
+		// letter. For example, the following would also throw an
+		// IllegalArgumentException at runtime in a Windows-based system since
+		// they use different roots:
+		// Path path5 = Paths.get("c:\\primate\\chimpanzee");
+		// Path path6 = Paths.get("d:\\storage\\bananas.txt"); 
+		// path5.relativize(path6); // THROWS EXCEPTION AT RUNTIME (windows)
 	}
 }

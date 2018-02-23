@@ -21,5 +21,10 @@ public class Test01GetNameGetNameCount {
 
 		Path root = Paths.get("/");
 		System.out.println(root.getNameCount());
+
+		System.out.println();
+		for (int i = 0; i < path.getNameCount(); i++) {
+			System.out.println("Element " + i + " is: " + path.getName(i));
+		}
 	}
 }

@@ -15,5 +15,7 @@ public class Test08ToRealPath {
 		// occurs!
 		// java.nio.file.NoSuchFileException
 
+		System.out.println(Paths.get(".").toRealPath());
+
 	}
 }
