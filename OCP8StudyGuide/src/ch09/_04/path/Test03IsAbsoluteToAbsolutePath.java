@@ -5,18 +5,18 @@ import java.nio.file.Paths;
 
 public class Test03IsAbsoluteToAbsolutePath {
 
-	public static void main(String[] args) {	
+	public static void main(String[] args) {
 
-		Path p1 = Paths.get("relative/path/a.txt");
+		Path path1 = Paths.get("relative/path/a.txt");
+		Path path2 = Paths.get("/stripes/zebra.exe");
+		Path path3 = Paths.get("c:/goats/Food.java");
 
-		boolean isAbsolute = p1.isAbsolute();
-		Path p2 = p1.toAbsolutePath();
-
-		System.out.println(isAbsolute);
-		System.out.println(p2);
+		System.out.println("isAbsolute : " + path1.isAbsolute());
+		System.out.println("toAbsolutePath : " + path1.toAbsolutePath());
+		System.out.println("isAbsolute : " + path2.isAbsolute());
+		System.out.println("isAbsolute : " + path3.isAbsolute());
 
 		// for linux or mac , / is root , for windows c:/ is root
-		System.out.println(Paths.get("/stripes/zebra.exe").isAbsolute());
-		System.out.println(Paths.get("c:/goats/Food.java").isAbsolute());
+
 	}
 }

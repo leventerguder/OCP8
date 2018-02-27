@@ -12,14 +12,15 @@ public class Test06Resolve {
 
 		System.out.println(path1.resolve(path2));
 		System.out.println(path2.resolve(path1));
-		// If the other parameter is an absolute path then this method trivially
-		// returns other
 		
+
+		Path path3 = Paths.get("/f1/f2");
+		Path path4 = Paths.get("f3");
+		System.out.println(path3.resolve(path4));
 		
-		Path p3 = Paths.get("/f1/f2");
-		Path p4 = Paths.get("f3");
-		System.out.println(p3.resolve(p4));
-		System.out.println(p4.resolve(p3));
+		System.out.println(path4.resolve(path3));
+
+		
 		
 	}
 }
