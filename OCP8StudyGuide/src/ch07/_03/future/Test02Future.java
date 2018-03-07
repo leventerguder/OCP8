@@ -16,15 +16,15 @@ public class Test02Future {
 
 		service = Executors.newSingleThreadExecutor();
 		Future<?> result = service.submit(() -> {
-			for (int i = 0; i < 50000; i++) {
+			for (int i = 0; i < 5000000; i++) {
 				counter++;
 			}
 		});
 
 		try {
-			// waits at most 10 second , throw TimeOutException if the task is
+			// waits at most 11 second , throw TimeOutException if the task is
 			// not done!
-			Object obj = result.get(10, TimeUnit.SECONDS);
+			Object obj = result.get(1, TimeUnit.MILLISECONDS);
 			System.out.println("After result.get");
 			System.out.println(obj);
 			// Runnable.run is void , the get method always returns null;

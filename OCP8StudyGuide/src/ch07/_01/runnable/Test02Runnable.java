@@ -9,6 +9,7 @@ class PrintData implements Runnable {
 			System.out.println("i : " + i);
 		}
 
+		System.out.println(Thread.currentThread().getName());
 	}
 
 }
