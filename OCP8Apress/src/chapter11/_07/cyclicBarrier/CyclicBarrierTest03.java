@@ -4,7 +4,7 @@ import java.util.Date;
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
 
-public class JavaCyclicBarrierExample {
+public class CyclicBarrierTest03 {
 
 	public static void main(String[] args) {
 

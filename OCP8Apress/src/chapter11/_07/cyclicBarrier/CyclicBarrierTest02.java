@@ -11,7 +11,7 @@ class Computation1 implements Runnable {
 	public void run() {
 		product = 2 * 3;
 		try {
-			Tester.newBarrier.await();
+			CyclicBarrierTest02.newBarrier.await();
 		} catch (InterruptedException | BrokenBarrierException e) {
 			e.printStackTrace();
 		}
@@ -23,14 +23,14 @@ class Computation2 implements Runnable {
 
 	public void run() {
 		// check if newBarrier is broken or not
-		System.out.println("Is the barrier broken? - " + Tester.newBarrier.isBroken());
+		System.out.println("Is the barrier broken? - " + CyclicBarrierTest02.newBarrier.isBroken());
 		sum = 10 + 20;
 		try {
-			Tester.newBarrier.await(3000, TimeUnit.MILLISECONDS);
+			CyclicBarrierTest02.newBarrier.await(3000, TimeUnit.MILLISECONDS);
 
 			// number of parties waiting at the barrier
 			System.out.println("Number of parties waiting at the barrier " + "at this point = "
-					+ Tester.newBarrier.getNumberWaiting());
+					+ CyclicBarrierTest02.newBarrier.getNumberWaiting());
 		} catch (InterruptedException | BrokenBarrierException e) {
 			e.printStackTrace();
 		} catch (TimeoutException e) {
@@ -39,12 +39,12 @@ class Computation2 implements Runnable {
 	}
 }
 
-public class Tester implements Runnable {
+public class CyclicBarrierTest02 implements Runnable {
 	public static CyclicBarrier newBarrier = new CyclicBarrier(3);
 
 	public static void main(String[] args) {
 		// parent thread
-		Tester test = new Tester();
+		CyclicBarrierTest02 test = new CyclicBarrierTest02();
 
 		Thread t1 = new Thread(test);
 		t1.start();
@@ -67,7 +67,7 @@ public class Tester implements Runnable {
 		t2.start();
 
 		try {
-			Tester.newBarrier.await();
+			CyclicBarrierTest02.newBarrier.await();
 		} catch (InterruptedException | BrokenBarrierException e) {
 			e.printStackTrace();
 		}

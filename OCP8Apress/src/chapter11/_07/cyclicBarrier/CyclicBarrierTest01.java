@@ -5,7 +5,7 @@ import java.util.concurrent.BrokenBarrierException;
 
 // The run() method in this thread should be called only when
 // four players are ready to start the game
-class MixedDoubleTennisGame extends Thread {
+class MixedDoubleTennisGame implements Runnable{
 	public void run() {
 		System.out.println("All four players ready, game starts \n Love all...");
 	}
@@ -35,8 +35,8 @@ class Player extends Thread {
 // Creates a CyclicBarrier object by passing the number of threads and the
 // thread to run
 // when all the threads reach the barrier
-class CyclicBarrierTest {
-	public static void main(String[] args) {
+class CyclicBarrierTest01 {
+	public static void main(String[] args) throws InterruptedException {
 		// a mixed-double tennis game requires four players; // so wait for four
 		// players
 		// (i.e., four threads) to join to start the game
@@ -48,9 +48,13 @@ class CyclicBarrierTest {
 		new Player(barrier, "Tintin");
 		new Player(barrier, "Barbie");
 		
-		new Player(barrier, "Levent1");
-		new Player(barrier, "Levent2");
-		new Player(barrier, "Levent3");
-		new Player(barrier, "Levent4");
+		Thread.sleep(1000);
+		System.out.println();
+		System.out.println("Reserving tennis court \n" + "As soon as four players arrive, game will start");
+		
+		new Player(barrier, "Gamer1");
+		new Player(barrier, "Gamer2");
+		new Player(barrier, "Gamer3");
+		new Player(barrier, "Gamer4");
 	}
 }
