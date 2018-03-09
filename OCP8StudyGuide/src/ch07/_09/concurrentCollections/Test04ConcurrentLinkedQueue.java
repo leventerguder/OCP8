@@ -10,10 +10,15 @@ public class Test04ConcurrentLinkedQueue {
 		Queue<Integer> queue = new ConcurrentLinkedQueue<>();
 		queue.offer(20);
 		queue.offer(30);
-		// 20 30
+		queue.add(40);
+		// 20 30 40
 		//
 		System.out.println(queue.poll());
 		System.out.println(queue.poll());
 		System.out.println(queue.poll());
 	}
 }
+
+// public boolean add(E e) {
+// return offer(e);
+// }

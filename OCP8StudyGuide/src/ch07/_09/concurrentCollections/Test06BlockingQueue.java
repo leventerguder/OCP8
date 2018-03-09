@@ -13,6 +13,9 @@ public class Test06BlockingQueue {
 		blockingQueue.offer(40, 2, TimeUnit.SECONDS);
 		//
 		System.out.println(blockingQueue.poll());
-		System.out.println(blockingQueue.poll(10, TimeUnit.MILLISECONDS));
+		System.out.println(blockingQueue.poll(1, TimeUnit.NANOSECONDS));
 	}
 }
+
+// The BlockingQueue is just like a regular Queue, except that it includes
+// methods that will wait a speci c amount of time to complete an operation.

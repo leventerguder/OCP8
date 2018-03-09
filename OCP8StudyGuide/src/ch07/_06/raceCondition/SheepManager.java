@@ -8,21 +8,22 @@ public class SheepManager {
 	private int sheepCount = 0;
 
 	private void incrementAndReport() {
-		//System.out.println(++sheepCount + " " + Thread.currentThread().getName());
 		System.out.print(++sheepCount + " ");
-		// 1 4 2 3 6 5 8 7 9 10 11 12 13 14 15 16 17 18 19 20 20
+		// 1 5 4 6 2 3 7 8 9 10
 	}
 
 	public static void main(String[] args) {
 
-		ExecutorService service = Executors.newFixedThreadPool(5);
+		ExecutorService service = Executors.newFixedThreadPool(20);
 		SheepManager manager = new SheepManager();
 		//
-		for (int i = 0; i < 20; i++) {
+		for (int i = 0; i < 10; i++) {
 			service.submit(() -> manager.incrementAndReport());
 		}
 		service.shutdown();
-
-		System.out.println(manager.sheepCount);
 	}
 }
+
+// 1 2 2 3 4 5 6 7 8 9  ( We know that we had 10 workers, but the results are incomplete and out of order.)
+// 2 4 5 6 7 8 1 9 10 3
+// 2 1 3 4 5 6 7 8 9 10

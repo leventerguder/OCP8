@@ -24,3 +24,9 @@ public class Test01Synchronized {
 		service.shutdown();
 	}
 }
+
+// We could have used an atomic count variable along with the synchronized block
+// in this example, although it is unnecessary. Since synchronized blocks allow
+// only one thread to enter, we're not gaining any improvement by using an
+// atomic variable if the only time that we access the variable is within a
+// synchronized block.

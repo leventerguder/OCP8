@@ -11,6 +11,7 @@ public class Test08CopyOnWriteArrayList {
 		for (Integer item : list) {
 			System.out.print(item + " ");
 			list.add(9);
+			list.remove(new Integer(3));
 		}
 		System.out.println();
 		System.out.println(list);
@@ -18,3 +19,5 @@ public class Test08CopyOnWriteArrayList {
 		// ConcurrentModificationException wold have been thrown at runtime.
 	}
 }
+// These classes copy all of their elements to a new underlying structure
+// anytime an element is added, modi ed, or removed from the collection.
