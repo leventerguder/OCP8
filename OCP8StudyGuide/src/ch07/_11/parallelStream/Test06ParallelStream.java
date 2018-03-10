@@ -15,7 +15,7 @@ public class Test06ParallelStream {
 			return i;
 		}).forEachOrdered(i -> System.out.print(i + " "));
 
-		// You can see that a stateful lambda expression, which modi es the data
+		// You can see that a stateful lambda expression, which modifies the data
 		// list in parallel, produces unpredictable results at runtime.
 		//
 		System.out.println();

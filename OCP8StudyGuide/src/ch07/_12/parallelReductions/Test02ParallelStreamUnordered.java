@@ -13,3 +13,7 @@ public class Test02ParallelStreamUnordered {
 		// performance.
 	}
 }
+
+// unordered ;
+// This method does not actually reorder the elements; it just tells the JVM
+// that if an order-based stream operation is applied, the order can be ignored.

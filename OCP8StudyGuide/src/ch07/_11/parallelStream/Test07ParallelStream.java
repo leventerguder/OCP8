@@ -18,9 +18,15 @@ public class Test07ParallelStream {
 		// is recommended that you use a concurrent collection.
 
 		// 1 2 3 4 5 6 7 8
-		// [1, 3, 4, 5, 2] ->missing ! 
+		// [1, 3, 4, 5, 2] ->missing !
 		System.out.println();
 		System.out.println(data);
+
+		// For an ArrayList object, the JVM internally manages a primitive array
+		// of the same type. As the size of the dynamic ArrayList grows, a new,
+		// larger primitive array is periodically required. If two threads both
+		// trigger the array to be resized at the same time, a result can be
+		// lost, producing the unexpected value shown here.
 
 	}
 }

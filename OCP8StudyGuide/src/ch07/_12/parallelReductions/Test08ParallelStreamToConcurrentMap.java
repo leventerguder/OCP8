@@ -4,7 +4,7 @@ import java.util.concurrent.ConcurrentMap;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class Test07ParallelStreamToConcurrentMap {
+public class Test08ParallelStreamToConcurrentMap {
 
 	public static void main(String[] args) {
 		Stream<String> stream1 = Stream.of("lions", "tigers", "bears").parallel();

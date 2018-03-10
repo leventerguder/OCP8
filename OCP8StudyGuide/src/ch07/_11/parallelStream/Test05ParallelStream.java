@@ -14,5 +14,5 @@ public class Test05ParallelStream {
 }
 
 // For the exam, you should remember that parallel streams can process results
-// independently, although the order of the results cannot be deter- mined ahead
+// independently, although the order of the results cannot be determined ahead
 // of time.
