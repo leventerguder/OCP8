@@ -24,7 +24,7 @@ class LionPenManager {
 
 }
 
-public class Test01CyclicBarrier {
+public class Test01WithOutCyclicBarrier {
 
 	public static void main(String[] args) {
 

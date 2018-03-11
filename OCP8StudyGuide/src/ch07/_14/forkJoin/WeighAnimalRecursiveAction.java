@@ -22,13 +22,14 @@ public class WeighAnimalRecursiveAction extends RecursiveAction {
 		if (end - start <= 3)
 			for (int i = start; i < end; i++) {
 				weights[i] = (double) new Random().nextInt(100);
-				System.out.println("Animal Weighed: " + i);
+				System.out.println("start : " + start + " end :" + end + " index : " + i);
 			}
 		else {
 			int middle = start + ((end - start) / 2);
 			System.out.println("[start=" + start + ",middle=" + middle + ",end=" + end + "]");
 
-			invokeAll(new WeighAnimalRecursiveAction(weights, start, middle), new WeighAnimalRecursiveAction(weights, middle, end));
+			invokeAll(new WeighAnimalRecursiveAction(weights, start, middle),
+					new WeighAnimalRecursiveAction(weights, middle, end));
 		}
 
 	}
