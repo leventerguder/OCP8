@@ -2,7 +2,9 @@ package ch07._05.scheduledExecutorService;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
@@ -20,8 +22,9 @@ public class Test04ScheduledExecutorService {
 		// As long as our number of tasks is less than our number of threads,
 		// all tasks will be executed concurrently
 
-		ScheduledExecutorService service = Executors.newScheduledThreadPool(4);
+		//ScheduledExecutorService service = Executors.newScheduledThreadPool(4);
 
+		ExecutorService service = Executors.newFixedThreadPool(4);
 		// ScheduledExecutorService service =
 		// Executors.newSingleThreadScheduledExecutor();
 		Callable<String> task1 = () -> {
@@ -48,11 +51,16 @@ public class Test04ScheduledExecutorService {
 			return "content4";
 		};
 
-		ScheduledFuture<String> result1 = service.schedule(task1, 100, TimeUnit.MILLISECONDS);
-		ScheduledFuture<String> result2 = service.schedule(task2, 100, TimeUnit.MILLISECONDS);
-		ScheduledFuture<String> result3 = service.schedule(task3, 100, TimeUnit.MILLISECONDS);
-		ScheduledFuture<String> result4 = service.schedule(task4, 100, TimeUnit.MILLISECONDS);
+//		ScheduledFuture<String> result1 = service.schedule(task1, 100, TimeUnit.MILLISECONDS);
+//		ScheduledFuture<String> result2 = service.schedule(task2, 100, TimeUnit.MILLISECONDS);
+//		ScheduledFuture<String> result3 = service.schedule(task3, 100, TimeUnit.MILLISECONDS);
+//		ScheduledFuture<String> result4 = service.schedule(task4, 100, TimeUnit.MILLISECONDS);
 
+		Future<String> result1 = service.submit(task1);
+		Future<String> result2 = service.submit(task2);
+		Future<String> result3 = service.submit(task3);
+		Future<String> result4 = service.submit(task4);
+		
 		Thread.sleep(500); // wait for finishing
 		if (result1.isDone() && result2.isDone() && result3.isDone() && result4.isDone()) {
 			System.out.println("shutdown...");

@@ -24,7 +24,7 @@ public class Test02Future {
 		try {
 			// waits at most 11 second , throw TimeOutException if the task is
 			// not done!
-			Object obj = result.get(1, TimeUnit.MILLISECONDS);
+			Object obj = result.get(100, TimeUnit.MILLISECONDS);
 			System.out.println("After result.get");
 			System.out.println(obj);
 			// Runnable.run is void , the get method always returns null;
