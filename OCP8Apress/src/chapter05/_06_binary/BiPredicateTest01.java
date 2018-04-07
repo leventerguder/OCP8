@@ -8,11 +8,11 @@ public class BiPredicateTest01 {
 
 	public static void main(String[] args) {
 	
-		System.out.println();
+		// boolean contains(Object o);
 		BiPredicate<List<Integer>, Integer> listContains = List::contains;
 		BiPredicate<List<Integer>, Integer> listContains2 = (List<Integer> list , Integer i) -> list.contains(i);
 		
-		Predicate<Object>  co = BiPredicateTest01::contains;
+		Predicate<Object> contains = BiPredicateTest01::contains;
 		//
 		//BiPredicate<List<Integer>, Integer> listContainsTest1 = BiPredicateTest01::contains; //compiler error
 		BiPredicate<List<Integer>, Integer> listContainsTest2 = BiPredicateTest01::containsTwo;  //OK

@@ -15,7 +15,16 @@ public class UnaryOperatorTest01 {
 		IntFunction<Integer> intFunction1 = Math::abs;
 		UnaryOperator<Integer> intUnary = Math::abs;
 		list.replaceAll(Math::abs);
-		
+
 		System.out.println(list);
 	}
 }
+
+// default void replaceAll(UnaryOperator<E> operator) {
+
+
+// UnaryOperator<T> extends Function<T,T>
+
+// IntUnaryOperator    ---> int applyAsInt(int)
+// LongUnaryOperator   ---> long applyAsLong(long)
+// DoubleUnaryOperator ---> double applyAsDouble(double)

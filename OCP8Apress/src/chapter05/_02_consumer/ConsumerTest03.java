@@ -9,22 +9,32 @@ public class ConsumerTest03 {
 		Stream<String> strings = Stream.of("hello", "world", "injavawetrust.com");
 		Consumer<String> consumer = System.out::println;
 		strings.forEach(consumer);
-		
+
 		//
 		Consumer<String> consumer2 = ConsumerTest03::staticMethod;
-		
-		//Consumer<String> consumer3 = staticVar::staticMethod; //compiler error
-		
-		Consumer<String> consumer4 = staticVar::method; //OK
+
+		// Consumer<String> consumer3 = staticVar::staticMethod; //compiler
+		// error
+
+		Consumer<String> consumer4 = staticVarNull::method; // OK
+		// consumer4 => null
+
+		Consumer<String> consumer5 = staticVarNotNull::method; // OK
+
+		consumer2.accept("hello");
+		// consumer4.accept("world"); //NPE
+
+		consumer5.accept("world");
 	}
-	
-	private static ConsumerTest03 staticVar;
-	
-	public static void staticMethod(String s){
+
+	private static ConsumerTest03 staticVarNull;
+	private static ConsumerTest03 staticVarNotNull = new ConsumerTest03();
+
+	public static void staticMethod(String s) {
 		System.out.println(s.toUpperCase());
 	}
-	
-	public void method(String s){
+
+	public void method(String s) {
 		System.out.println(s.toUpperCase());
 	}
 }

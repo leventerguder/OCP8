@@ -1,6 +1,7 @@
 package chapter05._05_primitives;
 
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.function.BooleanSupplier;
 import java.util.function.IntSupplier;
 import java.util.function.Supplier;
 import java.util.stream.IntStream;
@@ -9,6 +10,14 @@ import java.util.stream.Stream;
 public class PrimitiveSupplierTest01 {
 
 	public static void main(String[] args) {
+
+		
+//      java.util.function package
+//		BooleanSupplier # boolean getAsBoolean
+//		IntSupplier  # int getAsInt
+//		LongSupplier # long getAsLong
+//		DoubleSupplier # double getAsDouble
+		
 		AtomicInteger ints = new AtomicInteger(0);
 
 		Supplier<Integer> supplier1 = ints::incrementAndGet;

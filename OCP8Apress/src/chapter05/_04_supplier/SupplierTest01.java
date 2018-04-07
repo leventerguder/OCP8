@@ -7,10 +7,19 @@ import java.util.stream.Stream;
 public class SupplierTest01 {
 
 	public static void main(String[] args) {
+		
 		Random random = new Random();
 
-		Supplier<Boolean> s1 = random::nextBoolean;
-		Stream.generate(s1).limit(5).forEach(System.out::println);
+		Supplier<Boolean> supplier1 = random::nextBoolean;
+		Stream.generate(supplier1).limit(5).forEach(s -> System.out.print(s + " "));
+
+		//
+		System.out.println();
+		
+		Supplier<Integer> supplier2 = random::nextInt;
+		Stream.generate(supplier2).limit(3).forEach(s -> System.out.print(s + " "));
+		
+		//
 	}
 }
 

@@ -8,27 +8,40 @@ public class BiFunctionTest01 {
 		//
 		BiFunction<String, String, String> ccat = (x, y) -> x.concat(y);
 		System.out.println(ccat.apply("hello", "world"));
-		
+
 		// String concat(String str)
 
 		BiFunction<String, String, String> ccat2 = String::concat;
-		
-		//public String replaceAll(String regex, String replacement)
+
+		// public String replaceAll(String regex, String replacement)
 		BiFunction<String, String, String> ccat3 = new String()::replaceAll;
-		
-		//BiFunction<String, String, String> ccat4 = String::replaceAll; //compiler error
+
+		// BiFunction<String, String, String> ccat4 = String::replaceAll;
+		// //compiler error
+
+		// public boolean startsWith(String prefix)
+		BiFunction<String, String, Boolean> startsWith = String::startsWith;
+
+		// public int indexOf(String str) {
+		BiFunction<String, String, Integer> indexOf = String::indexOf;
+
+		// public int indexOf(int ch)
+		BiFunction<String, Integer, Integer> indexOf2 = String::indexOf;
 
 		// public int compareTo(Double anotherDouble)
 		BiFunction<Double, Double, Integer> compares = Double::compareTo;
+
+		// public static int compare(double d1, double d2) {
 		BiFunction<Double, Double, Integer> compares2 = Double::compare;
 
 		System.out.println(compares.apply(10.5, 2.5));
 		System.out.println(compares2.apply(10.5, 2.5));
 
-		//burada kendi tipinde parametre aliyorsa metot , bu durumda bu sekilde kullanabiliyoruz
+		// burada kendi tipinde parametre aliyorsa metot , bu durumda bu sekilde
+		// kullanabiliyoruz
 		BiFunction<BiFunctionTest01, BiFunctionTest01, Integer> testCompare = BiFunctionTest01::compareTo;
-		
-		BiFunction<Double,Double,Integer> bif1 = new BiFunctionTest01()::testMethod;
+
+		BiFunction<Double, Double, Integer> bif1 = new BiFunctionTest01()::testMethod;
 	}
 
 	private final double value = 1;
