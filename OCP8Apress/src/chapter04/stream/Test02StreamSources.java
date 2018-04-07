@@ -1,10 +1,10 @@
-package chapter04;
+package chapter04.stream;
 
 import java.util.Arrays;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
-public class StreamSources {
+public class Test02StreamSources {
 
 	public static void main(String[] args) {
 		IntStream is = IntStream.range(1, 6);

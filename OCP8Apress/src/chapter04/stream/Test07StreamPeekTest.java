@@ -1,8 +1,8 @@
-package chapter04;
+package chapter04.stream;
 
 import java.util.stream.Stream;
 
-public class StreamPeekTest {
+public class Test07StreamPeekTest {
 
 	public static void main(String[] args) {
 		Stream.of(1, 2, 3, 4, 5)
