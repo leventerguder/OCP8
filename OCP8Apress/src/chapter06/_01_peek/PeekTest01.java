@@ -18,3 +18,9 @@ public class PeekTest01 {
 		System.out.println(sum);
 	}
 }
+
+// java.util.stream.Stream<T>
+// Stream<T> peek(Consumer<? super T> action);
+
+// java.util.stream.DoubleStream
+// DoubleStream peek(DoubleConsumer action);
