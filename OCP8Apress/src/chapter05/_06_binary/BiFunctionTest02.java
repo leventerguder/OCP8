@@ -1,19 +1,24 @@
-package chapter06._04_calculation;
+package chapter05._06_binary;
 
-import java.util.Arrays;
-import java.util.Comparator;
+import java.util.Locale;
 import java.util.function.BiFunction;
 import java.util.function.Function;
 
-public class CalculationTest01 {
+public class BiFunctionTest02 {
 
 	public static void main(String[] args) {
-		String[] words = "you never know what you have until you clean your room".split(" ");
-		//
+		// public String toUpperCase() {
+		// return toUpperCase(Locale.getDefault());
+		// }
+		Function<String, String> str1 = String::toUpperCase;
 
-		System.out.println(Arrays.stream(words).min(String::compareTo).get());
+		// public String toLowerCase(Locale locale) {
+		Function<Locale, String> str2 = new String()::toLowerCase;
 
-		Function<CalculationTest01, Integer> f1 = CalculationTest01::length;
+		// public String toLowerCase(Locale locale) {
+		BiFunction<String, Locale, String> str3 = String::toLowerCase;
+
+		Function<BiFunctionTest02, Integer> f1 = BiFunctionTest02::length;
 		// burada length metodu parametre almiyor.
 		// benzer sekilde String sinifinda da length metodu parametre almiyor
 		// kendisini kullaniyor.
@@ -32,15 +37,6 @@ public class CalculationTest01 {
 		// olmasi gerekli.
 		// public int compareTo(String anotherString) {
 		Function<String, Integer> c2 = new String()::compareTo;
-
-		//
-		Comparator<String> comp = (str1, str2) -> str1.compareTo(str2);
-		System.out.println(Arrays.stream(words).min(comp).get());
-
-		Comparator<String> comp2 = String::compareTo;
-
-		System.out.println(Arrays.stream(words).min(comp2).get());
-
 	}
 
 	// private char value[];

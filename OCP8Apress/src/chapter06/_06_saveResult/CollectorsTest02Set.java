@@ -7,6 +7,7 @@ import java.util.stream.Collectors;
 public class CollectorsTest02Set {
 
 	public static void main(String[] args) {
+		//
 		String[] roseQuote = "a rose is a rose is a rose".split(" ");
 		Set<String> words = Arrays.stream(roseQuote).collect(Collectors.toSet());
 		
