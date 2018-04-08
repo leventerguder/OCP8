@@ -15,6 +15,7 @@ public class SupplierTest03 {
 		// equivalent to:
 		Supplier<String> newString2 = () -> new String();
 
+		Supplier<Integer> cs = new String()::length;
 		//
 
 		Function<String, Integer> f1 = Integer::new; // Integer(String s)

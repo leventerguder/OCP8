@@ -2,6 +2,7 @@ package chapter05._03_function;
 
 import java.util.Arrays;
 import java.util.function.Function;
+import java.util.function.Supplier;
 
 public class FunctionTest01 {
 
@@ -9,6 +10,8 @@ public class FunctionTest01 {
 
 		Function<String, Integer> f1 = Integer::parseInt;
 		Function<String, Integer> f2 = (String s) -> Integer.parseInt(s);
+		
+		Function<String, Integer> f4 = String::length; // !!!
 		
 		Function <Integer,Integer> f3 = Math::abs;
 
