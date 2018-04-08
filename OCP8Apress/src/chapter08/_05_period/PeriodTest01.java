@@ -10,6 +10,7 @@ public class PeriodTest01 {
 	// of years, months, and days.
 
 	public static void main(String[] args) {
+		
 		LocalDate localDate1 = LocalDate.of(2015, Month.JULY, 18);
 		LocalDate localDate2 = LocalDate.now();
 		//

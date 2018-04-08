@@ -3,14 +3,17 @@ package chapter08._08_zone;
 import java.time.Duration;
 import java.time.Instant;
 import java.time.ZoneId;
+import java.time.zone.ZoneRules;
 import java.util.Set;
 import java.util.function.Consumer;
 
-public class DayLighSavingTest01 {
+public class ZoneRulesTest01 {
 
 	public static void main(String[] args) {
+		//
 		ZoneId defaultZone = ZoneId.systemDefault();
-		Duration duration01 = defaultZone.getRules().getDaylightSavings(Instant.now());
+		ZoneRules rules = defaultZone.getRules();
+		Duration duration01 = rules.getDaylightSavings(Instant.now());
 		System.out.println(duration01.toHours());
 
 		ZoneId kolkataZone = ZoneId.of("Asia/Kolkata");
@@ -26,7 +29,7 @@ public class DayLighSavingTest01 {
 		Set<String> zones = ZoneId.getAvailableZoneIds();
  
 		Consumer<String> consumer = (String zoneId) ->  {
-			ZoneId zone = ZoneId.of("Pacific/Auckland");
+			ZoneId zone = ZoneId.of(zoneId);
 			Duration dst = zone.getRules().getDaylightSavings(Instant.now());
 			System.out.printf(zoneId + "zone DST is: %d hours", dst.toHours());
 			System.out.println();

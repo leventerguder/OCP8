@@ -5,6 +5,7 @@ import java.time.Period;
 public class PeriodTest02 {
 
 	public static void main(String[] args) {
+		//
 		Period p1 = Period.of(1, 4, 20);
 		System.out.println(p1);
 

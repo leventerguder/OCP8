@@ -9,18 +9,22 @@ import java.time.format.DateTimeFormatter;
 public class FlighTravelTest01 {
 
 	public static void main(String[] args) {
+		//
 		DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd MMM yyy hh.mm a");
 
-		ZonedDateTime departure = ZonedDateTime.of(LocalDateTime.of(2018, Month.JANUARY, 1, 6, 0),
+		ZonedDateTime departureSingapore = ZonedDateTime.of(LocalDateTime.of(2018, Month.JANUARY, 1, 6, 0),
 				ZoneId.of("Asia/Singapore"));
-		
-		System.out.println(departure);
-		System.out.println(dateTimeFormatter.format(departure));
-		//
-		ZonedDateTime arrival = departure.withZoneSameInstant(ZoneId.of("Pacific/Auckland")).plusHours(10);
-		
-		System.out.println(arrival);
-		System.out.println(dateTimeFormatter.format(arrival));
-		
+
+		ZonedDateTime sameInstantAtAuckLand = departureSingapore.withZoneSameInstant(ZoneId.of("Pacific/Auckland"));
+
+		System.out.println("departure : " + departureSingapore);
+		System.out.println("formatted : " + dateTimeFormatter.format(departureSingapore));
+		System.out.println("formatted : " + dateTimeFormatter.format(sameInstantAtAuckLand));
+
+		ZonedDateTime arrival = sameInstantAtAuckLand.plusHours(10);
+
+		System.out.println("arrival time to Auckland : " + arrival);
+		System.out.println("formatted : " + dateTimeFormatter.format(arrival));
+
 	}
 }

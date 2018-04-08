@@ -6,6 +6,7 @@ import java.time.temporal.ChronoUnit;
 public class DurationTest02 {
 
 	public static void main(String[] args) {
+		//
 		Duration duration1 = Duration.of(65, ChronoUnit.MINUTES); // PT1H5M
 		System.out.println(duration1);
 		System.out.println(duration1.getSeconds());

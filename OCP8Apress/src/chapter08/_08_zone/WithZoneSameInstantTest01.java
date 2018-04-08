@@ -6,9 +6,10 @@ import java.time.Month;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 
-public class TimeDifferenceTest01 {
+public class WithZoneSameInstantTest01 {
 
 	public static void main(String[] args) {
+		//
 		ZoneId singaporeZone = ZoneId.of("Asia/Singapore");
 		ZonedDateTime dateTimeInSingapore = ZonedDateTime.of(LocalDateTime.of(2018, Month.JANUARY, 1, 6, 0),
 				singaporeZone);
@@ -18,6 +19,8 @@ public class TimeDifferenceTest01 {
 
 		ZoneId aucklandZone = ZoneId.of("Pacific/Auckland");
 		ZonedDateTime sameDateTimeInAuckland = dateTimeInSingapore.withZoneSameInstant(aucklandZone);
+		// Returns a copy of this date-time with a different time-zone,
+		// retaining the instant.
 
 		System.out.println(sameDateTimeInAuckland);
 		//

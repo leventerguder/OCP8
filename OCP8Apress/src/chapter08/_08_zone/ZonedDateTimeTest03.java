@@ -5,7 +5,7 @@ import java.time.ZoneId;
 import java.time.ZoneOffset;
 import java.time.ZonedDateTime;
 
-public class ZoneOffsetTest02 {
+public class ZonedDateTimeTest03 {
 
 	public static void main(String[] args) {
 

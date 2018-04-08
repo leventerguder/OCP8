@@ -5,6 +5,7 @@ import java.time.LocalDate;
 public class LocalDateTest04 {
 
 	public static void main(String[] args) {
+		//
 		LocalDate date78 = LocalDate.ofYearDay(2017, 78);
 		System.out.println(date78);
 

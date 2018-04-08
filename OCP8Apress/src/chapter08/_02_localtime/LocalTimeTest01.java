@@ -7,19 +7,12 @@ public class LocalTimeTest01 {
 	public static void main(String[] args) {
 		//
 		LocalTime currentTime = LocalTime.now();
-		System.out.println(currentTime);
-		//
-		System.out.println(LocalTime.of(18, 30));
+		LocalTime localTime1 = LocalTime.of(20, 30);
+		LocalTime localTime2 = LocalTime.of(20, 30, 50, 15550);
 
-		//
-		// plusHours
-		// plusMinutes
-		// plusSeconds
-		//
+		System.out.println("currentTime : " + currentTime);
+		System.out.println("localTime1 : " + localTime1);
+		System.out.println("localTime2 : " + localTime2);
 		
-		LocalTime currentTime2 = LocalTime.now();
-		currentTime2 = currentTime2.plusHours(2);
-		
-		System.out.println(currentTime2);
 	}
 }

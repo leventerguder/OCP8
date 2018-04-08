@@ -7,6 +7,7 @@ import java.time.LocalTime;
 public class LocalDateTimeTest02 {
 
 	public static void main(String[] args) {
+		//
 		LocalDateTime localDateTime = LocalDateTime.now();
 		LocalDate localDate = localDateTime.toLocalDate();
 		LocalTime localTime = localDateTime.toLocalTime();
