@@ -13,6 +13,7 @@ public class FilesAttributeTest02 {
 	public static void main(String[] args) throws IOException {
 		Path path = Paths.get("log.txt");
 		
+		// if there is no file ; java.nio.file.NoSuchFileException will be thrown.
 		Map<String, Object> map = Files.readAttributes(path, "*");
 		System.out.println(map);
 		

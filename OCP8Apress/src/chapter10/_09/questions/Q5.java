@@ -1,4 +1,4 @@
-package chapter10.mock;
+package chapter10._09.questions;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -8,7 +8,7 @@ import java.nio.file.attribute.BasicFileAttributes;
 import java.util.function.BiPredicate;
 import java.util.stream.Stream;
 
-public class QX5 {
+public class Q5 {
 
 	public static void main(String[] args) throws IOException {
 

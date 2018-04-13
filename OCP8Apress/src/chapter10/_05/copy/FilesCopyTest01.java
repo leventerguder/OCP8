@@ -24,5 +24,16 @@ public class FilesCopyTest01 {
 		// the target directory is created, not its sub files and directories.
 
 		// http://www.codejava.net/java-se/file-io/java-nio-copy-file-or-directory-examples
+
+		// all the directories (except the last one, if you are copying a directory) on
+		// the specified path must exist to avoid NoSuchFileException.
+
+		// What if you try copying a directory? It will work, but remember that it will
+		// only copy the top-level directory, not the files/directories contained within
+		// that directory.
+
+		// if you copy a directory using the copy() method, it does not copy the
+		// files/directories contained in the source directory; you need to explicitly
+		// copy them to the destination folder.
 	}
 }

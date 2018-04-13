@@ -10,7 +10,7 @@ public class FilesAttributeTest01 {
 	public static void main(String[] args) throws IOException {
 		Path path = Paths.get("log.txt");
 		//
-		Object creationTime = Files.getAttribute(path, "creationTimex");
+		Object creationTime = Files.getAttribute(path, "creationTime");
 		System.out.println(creationTime);
 		//
 		// lastModifiedTime

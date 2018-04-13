@@ -1,12 +1,13 @@
-package chapter10.mock;
+package chapter10._09.questions;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Iterator;
 
-public class QX1 {
+public class Q1 {
 
 	public static void main(String[] args) {
+		//
 		Path path = Paths.get("D:\\directory\\file.txt");
 		
 		// in the while loop , you use iterator() to get a temporary iterator object.
