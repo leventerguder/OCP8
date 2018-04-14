@@ -6,7 +6,7 @@ import java.nio.file.Paths;
 public class PathTest02 {
 
 	public static void main(String[] args) {
-		Path path = Paths.get("folder/.././file.txt");
+		Path path = Paths.get("folder/folder/.././file.txt");
 		
 		System.out.println("getRoot() : " + path.getRoot());
 		System.out.println("geFileName() : " + path.getFileName());
