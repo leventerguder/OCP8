@@ -2,7 +2,8 @@ package chapter11._13.questions;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class QX4 {
+public class Q4 {
+	//
 	static AtomicInteger ai = new AtomicInteger(10);
 
 	public static void check() {

@@ -7,7 +7,7 @@ class Counter {
 // This class implements Runnable interface
 // Its run method increments the counter three times
 class UseCounter implements Runnable {
-	
+
 	public void increment() {
 
 		// increments the counter and prints the value // of the counter shared
@@ -15,6 +15,14 @@ class UseCounter implements Runnable {
 
 		Counter.count++;
 		System.out.print(Counter.count + " ");
+
+		// for fix race condition ;
+		// In the increment() method, you acquire a lock on the this reference before reading and writing to 
+		// Counter.count. So, it is not possible for more than one thread to execute these statements at the same time.
+//		synchronized (this) {
+//			Counter.count++;
+//			System.out.print(Counter.count + "  ");
+//		}
 
 	}
 
@@ -28,7 +36,7 @@ class UseCounter implements Runnable {
 // This class creates three threads
 public class RaceCondition {
 	public static void main(String args[]) throws InterruptedException {
-		
+
 		UseCounter c = new UseCounter();
 		Thread t1 = new Thread(c);
 		Thread t2 = new Thread(c);

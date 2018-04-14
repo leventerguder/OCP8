@@ -2,7 +2,7 @@ package chapter11._13.questions;
 
 import java.util.concurrent.Callable;
 
-public class QX5 {
+public class Q5 {
 
 }
 

@@ -1,6 +1,6 @@
 package chapter11._13.questions;
 
-public class QX7 {
+public class Q7 {
 
 }
 

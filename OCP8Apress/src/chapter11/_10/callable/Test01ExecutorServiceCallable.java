@@ -21,7 +21,7 @@ class CallableImpl implements Callable<Integer> {
 
 }
 
-public class Test01Callable {
+public class Test01ExecutorServiceCallable {
 
 	public static void main(String[] args) throws InterruptedException, ExecutionException {
 

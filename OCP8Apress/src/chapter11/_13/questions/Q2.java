@@ -1,6 +1,6 @@
 package chapter11._13.questions;
 
-public class QX2 {
+public class Q2 {
 
 }
 // You’ve written an application for processing tasks. In this application,

@@ -2,6 +2,7 @@ package chapter11._12.stream;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Stream;
 
 public class Test01ParallelStream {
 
@@ -18,3 +19,12 @@ public class Test01ParallelStream {
 		System.out.println(isParallel2);
 	}
 }
+
+// When you call the stream() method of Collection class , you will get a
+// sequential stream.
+// when you call parallelStream() method of the Collection class , you will get a
+// parallel stream.
+
+// java.util.Collection
+// default Stream<E> parallelStream() {
+// default Stream<E> stream() {

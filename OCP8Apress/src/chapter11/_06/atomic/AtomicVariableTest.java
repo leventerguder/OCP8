@@ -5,6 +5,10 @@ import java.util.concurrent.atomic.AtomicInteger;
 class Counter {
 	public static Integer integer = new Integer(0);
 	public static AtomicInteger atomicInteger = new AtomicInteger(0);
+	// AtomicInteger do not use a lock; rather ; they internally use volatile
+	// variables and a low-level mechanism known as Compare-And-Set (CAS)
+	// for this reason using AtomicInteger and related classes is faster than
+	// using locks syhncronized keyword.
 }
 
 class AtomicVariableTest {

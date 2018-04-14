@@ -19,3 +19,6 @@ public class CyclicBarrierNotes {
 // If all threads meet at the barrier point, the barrier has
 // been successfully passed, in which case all threads are released and the
 // barrier is reset so it can be used again.
+
+// https://stackoverflow.com/questions/21808814/whats-the-difference-between-cyclicbarrier-countdownlatch-and-join-in-java
+// http://javarevisited.blogspot.com.tr/2012/07/cyclicbarrier-example-java-5-concurrency-tutorial.html

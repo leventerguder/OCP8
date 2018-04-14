@@ -7,18 +7,11 @@ public class HostageRescueLivelock {
 
 	public static void main(String[] args) {
 
-		Thread t1 = new Thread(new Runnable() {
-			public void run() {
-				police.giveRansom(criminal);
-			}
-		});
+		Thread t1 = new Thread(() -> police.giveRansom(criminal));
 		t1.start();
 
-		Thread t2 = new Thread(new Runnable() {
-			public void run() {
-				criminal.releaseHostage(police);
-			}
-		});
+		Thread t2 = new Thread(() -> criminal.releaseHostage(police));
+
 		t2.start();
 	}
 

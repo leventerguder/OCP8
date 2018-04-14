@@ -13,8 +13,7 @@ class Runs {
 // Counter class has two methods – IncrementBallAfterRun and
 // IncrementRunAfterBall.
 // For demonstrating deadlock, we call these two methods in the run method, so
-// that
-// locking can be requested in opposite order in these two methods
+// that locking can be requested in opposite order in these two methods
 class Counter implements Runnable {
 	// this method increments runs variable first and then increments the balls
 	// variable
@@ -50,6 +49,13 @@ class Counter implements Runnable {
 		IncrementRunAfterBall();
 	}
 }
+
+// Deadlocks can arise in the context of multiple locks.
+// If multiple locks are acquired in the same order, then a deadlock will not
+// occur; however, if you acquire them in a different order, then deadlocks may occur.
+// Deadlocks (just like other multi-threading problems) are non-deterministic; you cannot consistently reproduce deadlocks.
+
+// Avoid acquiring multiple locks. If you want to acquire multiple locks, make sure that they are acquired in the same order everywhere to avoid deadlocks.
 
 public class DeadLock {
 	public static void main(String args[]) throws InterruptedException {

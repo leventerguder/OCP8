@@ -5,16 +5,19 @@ import java.util.concurrent.RecursiveTask;
 
 public class SumOfNUsingForkJoin {
 
-	private static long N = 1000_000; // one million - we want to compute sum
+	private static long N = 1_000_000; // one million - we want to compute sum
 	// from 1 .. one million
 	private static final int NUM_THREADS = 10;
 	// number of threads to create for
 	// distributing the effort
 
 	// This is the recursive implementation of the algorithm; inherit from
-	// RecursiveTask
-	// instead of RecursiveAction since we're returning values.
+	// RecursiveTask instead of RecursiveAction since we're returning values.
+	//
+	// if a task returns a result , extend from RecursiveTask ; otherwise extend from RecursiveAction
+	//
 	static class RecursiveSumOfN extends RecursiveTask<Long> {
+		
 		long from, to;
 
 		// from and to are range of values to sum-up
@@ -24,10 +27,18 @@ public class SumOfNUsingForkJoin {
 		}
 
 		// the method performs fork and join to compute the sum if the range
-		// of values can be summed by a threadremember that we want to divide
+		// of values can be summed by a thread remember that we want to divide
 		// the summation task equally among NUM_THREADS) then, sum the range
 		// of numbers from..to using a simple for loop;
 		// otherwise, fork the range and join the results
+		
+		// compute() method actually performs the task if the task is small enough to be executed;
+		// or splits the task into subtasks and invoke them.
+		
+		// the subtasks can be invoked either by inovkeAll or fork method. 
+		// use fork when the subtasks returns a value.
+		// use the join method to get the computed results.
+		//
 		public Long compute() {
 			if ((to - from) <= N / NUM_THREADS) {
 				// the range is something that can be handled
@@ -64,6 +75,12 @@ public class SumOfNUsingForkJoin {
 
 	}
 
+	
+	// the placement of fork and join calls are very important. 
+	// first.fork()
+	// resultFirst = first.join
+	// resultSecond = second.compute();
+	
 	public static void main(String[] args) {
 		// Create a fork-join pool that consists of NUM_THREADS
 		ForkJoinPool pool = new ForkJoinPool(NUM_THREADS);

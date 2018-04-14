@@ -1,6 +1,6 @@
 package chapter11._13.questions;
 
-public class QX3 {
+public class Q3 {
 
 }
 
