@@ -7,6 +7,7 @@ import java.io.FileNotFoundException;
 
 public class Q2 {
 
+	// The read() method returns -1 when the file reaches the end.
 	public static void main(String[] args) throws FileNotFoundException, IOException {
 		File file = new File("txt");
 		int ch = 0;

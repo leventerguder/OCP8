@@ -3,7 +3,7 @@ package mock;
 import java.time.*;
 import java.time.temporal.ChronoUnit;
 
-class QX37_Review {
+class QX37 {
 	public static void main(String[] args) {
 		Duration tenYears = ChronoUnit.YEARS.getDuration().multipliedBy(10);
 		Duration aDecade = ChronoUnit.DECADES.getDuration();
