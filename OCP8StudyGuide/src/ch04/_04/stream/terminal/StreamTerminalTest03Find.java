@@ -10,7 +10,12 @@ public class StreamTerminalTest03Find {
 		// Optional<T> findFirst()
 		Stream<String> s1 = Stream.of("oracle", "java8");
 		Optional<String> opt = s1.findAny();
-		
+
 		System.out.println(opt);
+
+		Stream<String> s = Stream.of("monkey", "gorilla", "bonobo");
+		Stream<String> infinite = Stream.generate(() -> "chimp");
+		s.findAny().ifPresent(System.out::println); // monkey
+		infinite.findAny().ifPresent(System.out::println); // chimp
 	}
 }

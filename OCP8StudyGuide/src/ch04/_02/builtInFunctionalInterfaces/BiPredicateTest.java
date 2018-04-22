@@ -16,12 +16,15 @@ public class BiPredicateTest {
 
 		//
 		// public boolean contains(CharSequence s)
+		// This means that the first parameter in the lambda is used as the
+		// instance on which to call the method. The second parameter is passed
+		// to the startsWith() method itself.
 		BiPredicate<String, String> b3 = String::contains;
 
-		BiFunction<String, String, Boolean> f1 = String :: contains;
-		
+		BiFunction<String, String, Boolean> f1 = String::contains;
+
 		System.out.println(b3.test("java", "v"));
-		
+
 		//
 	}
 }

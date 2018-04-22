@@ -9,3 +9,7 @@ public class StreamTerminalTest05ForEach {
 		s.forEach(System.out::print); // MonkeyGorillaBonobo
 	}
 }
+// forEach() on an infinite stream does not terminate. Since there is no return
+// value, it is not a reduction.
+// Streams cannot use a traditional for loop to run because they don’t implement
+// the Iterable interface.

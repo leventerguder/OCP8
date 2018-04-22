@@ -8,9 +8,12 @@ public class ConsumerTest {
 		// public void println(String x)
 		Consumer<String> c1 = System.out::println;
 		Consumer<String> c2 = x -> System.out.println(x);
-		
+
 		// void accept(T t);
 		c1.accept("levent");
 		c2.accept("levent");
 	}
 }
+
+// You use a Consumer when you want to do something with a parameter but not
+// return anything.

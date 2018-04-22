@@ -18,3 +18,6 @@ public class GorillaFamily {
 		Gorilla g3 = () -> approach;
 	}
 }
+
+// Lambda expressions can access static variables, instance variables,
+// effectively final method parameters, and effectively final local variables.
