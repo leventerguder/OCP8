@@ -17,10 +17,14 @@ public class ComputeIfXTest2 {
 		//
 		BiFunction<String, Integer, Integer> mapper2 = (k, v) -> k.length() + v;
 		Integer jenny = counts.computeIfAbsent("Jenny", mapper);
+		Integer tom= counts.computeIfAbsent("Tom", mapper);
 		// counts.compute("Sam", mapper);
 
-		counts.compute("Jenny", mapper2);
+		// Integer jenny2 = counts.compute("Jenny", mapper2);
 
 		System.out.println(counts);
+		System.out.println(jenny);
+		//System.out.println(jenny2);
+		System.out.println(tom);
 	}
 }

@@ -9,6 +9,11 @@ import java.util.function.Supplier;
 
 public class MethodReference {
 
+	// There are four formats for method references:
+	// Static methods
+	// Instance methods on a particular instance
+	// Instance methods on an instance to be determined at runtime Constructors
+
 	public static void main(String[] args) {
 		// static methods
 		Consumer<List<Integer>> mf0 = Collections::sort;
@@ -25,7 +30,7 @@ public class MethodReference {
 
 		// public boolean startsWith(String prefix)
 
-		// public boolean isEmpty() 
+		// public boolean isEmpty()
 		Predicate<String> mf2 = String::isEmpty;
 		Predicate<String> lambda2 = s -> s.isEmpty();
 
