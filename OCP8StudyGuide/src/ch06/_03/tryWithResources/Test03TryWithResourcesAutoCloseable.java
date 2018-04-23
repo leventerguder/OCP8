@@ -14,10 +14,11 @@ public class Test03TryWithResourcesAutoCloseable {
 		
 		
 		//Unhandled exception type Exception thrown by automatic close() invocation on bird
-		//handle or declare!
-		try(Bird bird = new Bird()) {
-			
+		// handle or declare!
+		try (Bird bird = new Bird()) {
+			System.out.println("try-block");
 		}
+		System.out.println("after try");
 	}
 }
 

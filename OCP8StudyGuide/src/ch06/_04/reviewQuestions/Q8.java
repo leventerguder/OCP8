@@ -8,3 +8,4 @@ public class Q8 {
 }
 
 // java –ea On
+// java -da -ea:On On

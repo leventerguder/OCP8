@@ -9,10 +9,16 @@ public class Test04TryWithResourcesAutoCloseable {
 	// Idempotent means that the method can called be multiple times without any
 	// side effects or undesirable behavior on subsequent runs.
 
+	public static void main(String[] args) {
+		try (ExampleOne exampleOne = new ExampleOne()) {
+			System.out.println("try-block");
+		}
+	}
+
 }
 
 // ExampleOne is the best implementation. ExampleTwo throws Exception rather
-// than a more speci c subclass, which is not recommended. ExampleThree has a
+// than a more specic subclass, which is not recommended. ExampleThree has a
 // side effect. It changes the state of a variable. Side effects are not
 // recommended.
 
