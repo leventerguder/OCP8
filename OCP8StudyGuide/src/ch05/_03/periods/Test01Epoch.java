@@ -20,3 +20,7 @@ public class Test01Epoch {
 
 	}
 }
+
+// LocalDate has toEpochDay(), which is the number of days since January 1, 1970.
+// LocalDateTime and ZonedDateTime have toEpochSecond(), which is the number of seconds since January 1, 1970.
+// LocalTime does not have an epoch method. 

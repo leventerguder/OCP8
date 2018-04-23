@@ -12,5 +12,9 @@ public class Test03ManipulateTime {
 		LocalTime time = LocalTime.of(5, 15);
 		LocalDateTime ldt = LocalDateTime.of(date, time).minusDays(1).minusHours(10).minusSeconds(30);
 		System.out.println(ldt);
+		//
+		// date = date.plusMinutes(1); // DOES NOT COMPILE
+		// LocalDate does not contain time. This means that you cannot add
+		// minutes to it.
 	}
 }

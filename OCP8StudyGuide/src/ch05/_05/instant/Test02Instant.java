@@ -27,7 +27,7 @@ public class Test02Instant {
 		 * The Instant gets rid of the time zone and turns it into an Instant of
 		 * time in GMT. You cannot convert a LocalDateTime to an Instant.
 		 * Remember that an Instant is a point in time. A LocalDateTime does not
-		 * contain a time zone, and it is therefore not univer- sally recognized
+		 * contain a time zone, and it is therefore not universally recognized
 		 * around the world as the same moment in time.
 		 */
 

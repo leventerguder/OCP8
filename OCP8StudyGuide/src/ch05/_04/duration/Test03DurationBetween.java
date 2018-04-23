@@ -20,16 +20,16 @@ public class Test03DurationBetween {
 		System.out.println(between2); // PT-1H-10M
 
 		LocalDate startDay = LocalDate.of(2016, Month.JANUARY, 30);
-		LocalDate startEnd = LocalDate.of(2016, Month.FEBRUARY, 25);
+		LocalDate endDay = LocalDate.of(2016, Month.FEBRUARY, 25);
 
 		// Period#  public static Period between(LocalDate startDateInclusive, LocalDate endDateExclusive) 
-		Period p1 = Period.between(startDay, startEnd);
-		Period p2 = Period.between(startEnd, startDay);
+		Period p1 = Period.between(startDay, endDay);
+		Period p2 = Period.between(endDay, startDay);
 		System.out.println(p1); // P26D
 		System.out.println(p2); // P-26D
 		
 		
-		Duration between3 = Duration.between(startDay, startEnd);
+		Duration between3 = Duration.between(startDay, endDay);
 		System.out.println(between3);
 	
 		//Exception in thread "main" java.time.temporal.UnsupportedTemporalTypeException: Unsupported unit: Seconds

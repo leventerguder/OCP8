@@ -13,7 +13,7 @@ public class Test02DurationChronoUnit {
 		Duration everyMilli = Duration.of(1, ChronoUnit.MILLIS);
 		Duration everyNano = Duration.of(1, ChronoUnit.NANOS);
 		Duration halfDay = Duration.of(1, ChronoUnit.HALF_DAYS);
-		Duration decades = Duration.of(1, ChronoUnit.DECADES); //
+		//Duration decades = Duration.of(1, ChronoUnit.DECADES); //
 		//java.time.temporal.UnsupportedTemporalTypeException: Unit must not have an estimated duration
 
 		
@@ -24,7 +24,7 @@ public class Test02DurationChronoUnit {
 		System.out.println(everyMilli);
 		System.out.println(everyNano);
 		System.out.println(halfDay);
-		System.out.println(decades);
+		//System.out.println(decades);
 		
 //		PT24H
 //		PT1H

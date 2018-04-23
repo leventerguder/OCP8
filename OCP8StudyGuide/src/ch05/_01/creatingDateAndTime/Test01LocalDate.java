@@ -15,3 +15,10 @@ public class Test01LocalDate {
 		System.out.println(date2);
 	}
 }
+
+// The date and time classes have private constructors to force you to use the
+// factory’s static methods.
+
+// LocalDate d = new LocalDate(); // DOES NOT COMPILE
+
+// LocalDate.of(2015, Month.JANUARY, 32) // throws DateTimeException

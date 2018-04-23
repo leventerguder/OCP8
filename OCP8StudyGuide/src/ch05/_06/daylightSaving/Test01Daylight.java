@@ -14,9 +14,9 @@ public class Test01Daylight {
 		ZoneId zone = ZoneId.of("US/Eastern");
 		//
 		ZonedDateTime zdt = ZonedDateTime.of(date, time, zone); // 2016-03-13T01:30-05:00[US/Eastern]
-		
+
 		System.out.println(zdt);
-		System.out.println(zdt.plusHours(1)); //2016-03-13T03:30-04:00[US/Eastern]
+		System.out.println(zdt.plusHours(1)); // 2016-03-13T03:30-04:00[US/Eastern]
 	}
 
 }
@@ -25,8 +25,9 @@ public class Test01Daylight {
  * In the United States, we move the clocks an hour ahead in March and move them
  * an hour back in November. The exam will let you know if a date/time mentioned
  * falls on a weekend when the clocks are scheduled to be changed. If it is not
- * mentioned in a question, you can assume that is a normal weekend. We of
- * cially change our clocks at 2 a.m., which falls very early Sunday morning.
+ * mentioned in a question, you can assume that is a normal weekend. We
+ * officially change our clocks at 2 a.m., which falls very early Sunday
+ * morning.
  */
 
 /*

@@ -13,6 +13,12 @@ public class Test01DateTimeFormatter {
 		LocalTime time = LocalTime.of(11, 11, 34);
 		LocalDateTime dateTime = LocalDateTime.of(date, time);
 		//
+
+		System.out.println(date);
+		System.out.println(time);
+		System.out.println(dateTime);
+
+		// default
 		System.out.println(date.format(DateTimeFormatter.ISO_LOCAL_DATE));
 		System.out.println(time.format(DateTimeFormatter.ISO_LOCAL_TIME));
 		System.out.println(dateTime.format(DateTimeFormatter.ISO_LOCAL_DATE_TIME));

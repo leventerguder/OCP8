@@ -8,6 +8,8 @@ public class Q1 {
 // country codes follow standard conventions?
 
 // ✓ A. new Locale("hi");
-// ✓ B. new Locale("hi", "IN"); C. new Locale("IN");
-// D. new Locale("IN", "hi"); E. Locale.create("hi");
+// ✓ B. new Locale("hi", "IN");
+// C. new Locale("IN");
+// D. new Locale("IN", "hi"); 
+// E. Locale.create("hi");
 // F. Locale.create("IN");
