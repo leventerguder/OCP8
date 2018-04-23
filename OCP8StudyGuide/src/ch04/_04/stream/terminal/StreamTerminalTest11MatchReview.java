@@ -1,9 +1,9 @@
-package ch04._07.reviewQuestions;
+package ch04._04.stream.terminal;
 
 import java.util.function.Predicate;
 import java.util.stream.Stream;
 
-public class StreamMatchReview {
+public class StreamTerminalTest11MatchReview {
 
 	public static void main(String[] args) {
 

@@ -22,5 +22,8 @@ public class Test15PartitioningBy {
 
 		Map<Boolean, Set<String>> partitioningBy2 = s2.collect(Collectors.partitioningBy(pred, Collectors.toSet()));
 		System.out.println(partitioningBy2);
+
+		// Unlike groupingBy(), we cannot change the type of Map that gets returned
+		// However, there are only two keys in the map, so does it really matter which Map type we use
 	}
 }

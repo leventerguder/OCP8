@@ -27,11 +27,11 @@ public class Test14GroupingBy {
 		Map<Integer, Set<String>> groupedBy2 = s2.collect(Collectors.groupingBy(String::length, Collectors.toSet()));
 		System.out.println(groupedBy2);
 
-		Map<Integer, Set<String>> groupedBy3 = s3
+		TreeMap<Integer, Set<String>> groupedBy3 = s3
 				.collect(Collectors.groupingBy(String::length, TreeMap::new, Collectors.toSet()));
 		System.out.println(groupedBy3);
 
-		Map<Integer, List<String>> groupedBy4 = s4
+		TreeMap<Integer, List<String>> groupedBy4 = s4
 				.collect(Collectors.groupingBy(String::length, TreeMap::new, Collectors.toList()));
 		System.out.println(groupedBy4);
 
@@ -42,8 +42,5 @@ public class Test14GroupingBy {
 				Collectors.mapping(s -> s.charAt(0), Collectors.minBy(Comparator.naturalOrder()))));
 		System.out.println(groupedBy6);
 
-		Map<Integer, Optional<Character>> groupedBy7 = s7.collect(Collectors.groupingBy(String::length,
-				Collectors.mapping(s -> s.charAt(0), Collectors.minBy(Comparator.naturalOrder()))));
-		System.out.println(groupedBy7);
 	}
 }

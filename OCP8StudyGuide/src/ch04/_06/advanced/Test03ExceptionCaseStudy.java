@@ -10,9 +10,16 @@ public class Test03ExceptionCaseStudy {
 		throw new IOException();
 	}
 
-	public static void main(String[] args) throws IOException {
-		Test03ExceptionCaseStudy.create().stream().count();
-		
+	private static List<String> createSafe() {
+		try {
+			return Test03ExceptionCaseStudy.create();
+		} catch (IOException e) {
+			throw new RuntimeException(e);
+		}
+	}
+
+	public static void test1() throws IOException {
+
 		Supplier<List<String>> s = () -> {
 			try {
 				return create();
@@ -22,5 +29,13 @@ public class Test03ExceptionCaseStudy {
 			}
 			return null;
 		};
+	}
+
+	private void test2() throws IOException {
+		Test03ExceptionCaseStudy.create().stream().count();
+	}
+
+	private void test3() {
+		Supplier<List<String>> ss = Test03ExceptionCaseStudy::createSafe;
 	}
 }

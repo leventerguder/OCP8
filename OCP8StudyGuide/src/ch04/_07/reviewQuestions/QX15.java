@@ -17,3 +17,8 @@ public class QX15 {
 		System.out.println(map);
 	}
 }
+
+// The partitioningBy() collector creates a Map<Boolean, List<String>> when
+// passed to collect() by default.
+// D. Map<Boolean, List<String>>
+// E. Map<Boolean, Set<String>>
