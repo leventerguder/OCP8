@@ -10,8 +10,8 @@ import java.nio.file.attribute.FileTime;
 
 public class Test02FilesGetFileAttributeView {
 
-	// Files.readAttributes() method is useful for reading le data, it does not
-	// provide a direct mechanism for modifying le attributes. The NIO.2 API
+	// Files.readAttributes() method is useful for reading file data, it does
+	// not provide a direct mechanism for modifying file attributes. The NIO.2 API
 	// provides the Files.getFileAttributeView(Path,Class<V>) method,
 
 	public static void main(String[] args) throws IOException {
@@ -26,6 +26,10 @@ public class Test02FilesGetFileAttributeView {
 
 		FileTime lastModifiedTime = FileTime.fromMillis(data.lastModifiedTime().toMillis() + 10_000);
 		view.setTimes(lastModifiedTime, null, null);
-
+		// BasicFileAttributeView is used to modify a file’s set of date/time values.
 	}
 }
+
+// BasicFileAttributes BasicFileAttributeView
+// DosFileAttributes DosFileAttributeView
+// PosixFileAttributes PosixFileAttributeView

@@ -9,6 +9,12 @@ public class Test06FilesMove {
 
 	public static void main(String[] args) throws IOException {
 
+		// The Files.move(Path,Path) method moves or renames a file or directory
+		// within the file system.
+
+		// By default, the move() method will follow links, throw an exception
+		// if the file already exists, and not perform an atomic move.
+		
 		Path dir1 = Paths.get("original");
 		if (!Files.exists(dir1)) {
 			Files.createDirectory(dir1);

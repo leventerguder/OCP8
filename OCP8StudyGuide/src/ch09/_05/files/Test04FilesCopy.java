@@ -30,7 +30,7 @@ public class Test04FilesCopy {
 
 	}
 }
-// Directory copies are shallow rather than deep, meaning that les and
-// subdirectories within the directory are not copied. To copy the contents of a
+// Directory copies are shallow rather than deep, meaning that files and
+// sub directories within the directory are not copied. To copy the contents of a
 // directory, you would need to create a function to traverse the directory and
-// copy each le and subdirectory individually
+// copy each file and sub directory individually

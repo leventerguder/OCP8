@@ -16,9 +16,10 @@ public class Test02FilesFind {
 		BiPredicate<Path, BasicFileAttributes> matcher = (p, b) -> p.toString().endsWith(".java") && b.size() > 10;
 
 		// This example is similar to our previous Files.walk() example in that
-		// it will search a directory for les that end with the .java extension.
-		// It is more advanced, though, in that it applies a last-modi ed-time
-		// lter using the BasicFileAttributes object
+		// it will search a directory for files that end with the .java
+		// extension.
+		// It is more advanced, though, in that it applies a last-modified-time
+		// filter using the BasicFileAttributes object
 		Files.find(path, 10, matcher).forEach(System.out::println);
 
 	}

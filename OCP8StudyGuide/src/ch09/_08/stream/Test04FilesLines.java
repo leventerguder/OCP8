@@ -21,7 +21,7 @@ public class Test04FilesLines {
 	}
 }
 // Files.readAllLines() and commented that using it to read a very
-// large le could result in an OutOfMemoryError problem.
+// large file could result in an OutOfMemoryError problem.
 
 // Files.lines(Path) method that returns a Stream<String> object and does not
 // suffer from this same issue.

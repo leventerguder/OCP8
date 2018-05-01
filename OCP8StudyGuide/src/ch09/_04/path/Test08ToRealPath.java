@@ -15,6 +15,10 @@ public class Test08ToRealPath {
 		// occurs!
 		// java.nio.file.NoSuchFileException
 
+		// The toRealPath() method performs additional steps, such as removing
+		// redundant path elements. In other words, it implicitly calls
+		// normalize() on the resulting absolute path.
+		
 		System.out.println(Paths.get(".").toRealPath());
 
 	}

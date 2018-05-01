@@ -20,3 +20,8 @@ public class Test10FilesReadAllLines {
 		allLines.forEach(System.out::println);
 	}
 }
+// Files.readAllLines(path) method read all of the lines of a text file and
+// returns the results as an ordered List of String values.
+
+// if the file is significantly large you may encounter an OutOfMemoryError
+// trying to load all of it into memory.

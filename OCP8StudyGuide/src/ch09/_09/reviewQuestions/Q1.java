@@ -7,7 +7,9 @@ public class Q1 {
 
 	public static void main(String[] args) {
 		Path path = Paths.get("/user/.././root", "../kodiacbear.txt");
-		path.relativize(Paths.get("/lion"));
+		path.normalize().relativize(Paths.get("/lion"));
+		// Implementations of this interface are immutable and safe for use by
+		// multiple concurrent threads.
 		System.out.println(path);
 	}
 }

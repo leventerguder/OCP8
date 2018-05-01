@@ -9,9 +9,11 @@ import java.util.stream.Stream;
 public class QX16 {
 
 	public static void main(String[] args) throws IOException {
-		
+
 		Path path = Paths.get("/squid/food-schedule.csv");
 		Files.lines(path) // r1
-				.flatMap(p -> Stream.of(p.split(","))).map(s -> ((String) s).toUpperCase()).forEach(System.out::println);
+				.flatMap(p -> Stream.of(p.split(",")))
+				.map(s -> ((String) s).toUpperCase())
+				.forEach(System.out::println);
 	}
 }

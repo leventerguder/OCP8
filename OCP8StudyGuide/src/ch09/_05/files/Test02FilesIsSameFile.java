@@ -16,10 +16,12 @@ public class Test02FilesIsSameFile {
 		System.out.println(Files.isSameFile(path1, path2));
 	}
 }
-// The isSameFile() method rst checks if the Path objects are equal in terms of
-// equal(), and if so, it automatically returns true without checking to see if
-// either le exists.
+// Files.isSameFile(Path,Path) method is useful for determining if two Path
+// objects relate to the same file within the file system.
 
-// This isSameFile() method does not compare the contents of the file. For
-// example, two files may have identical content and attributes, but if they are
-// in different locations, then this method will return false.
+// The isSameFile() method first checks if the Path objects are equal in terms
+// of equal(), and if so, it automatically returns true without checking to see
+// if either file exists. If the Path object equals() comparison returns false,
+// then it locates each file to which the path refers in the file system and
+// determines if they are the same, throwing
+// a checked IOException if either file does not exist.

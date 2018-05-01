@@ -15,7 +15,8 @@ public class Test02FilesIsHiddenX {
 			Files.createFile(path1);
 		}
 		//
-		
+
+		// isHidden() method throws the checked IOException
 		System.out.println(Files.isHidden(path1));
 		System.out.println(Files.isReadable(path1));
 		System.out.println(Files.isWritable(path1));

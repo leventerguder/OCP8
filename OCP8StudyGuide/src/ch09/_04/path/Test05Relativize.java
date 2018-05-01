@@ -27,6 +27,12 @@ public class Test05Relativize {
 		System.out.println(path5.relativize(path6));
 		System.out.println(path6.relativize(path5));
 		
+		
+		Path path7 = Paths.get("/folder");
+		Path path8 = Paths.get("/folder2");
+		
+		System.out.println(path7.relativize(path8));
+		
 		// The relativize() method requires that both paths be absolute or both
 		// relative, and it will throw an IllegalArgumentException if a relative
 		// path value is mixed with an absolute path value. For example, the
