@@ -34,10 +34,12 @@ public class Test01ExecutorService {
 		System.out.println(service.isShutdown());
 		System.out.println(service.isTerminated());
 		service.shutdown();
-		// A thread executor creates a non-daemon thread on the rst task that is
+		// A thread executor creates a non-daemon thread on the first task that is
 		// executed, so failing to call shutdown() will result in your
 		// application never terminating.
 		
+		
+		//if a new task is submitted to the thread executor while it is shutting down , a RejectedExecutionException will be thrown.
 		//		service.execute(() -> {
 		//			System.out.println("java.util.concurrent.RejectedExecutionException");
 		//		});

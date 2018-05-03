@@ -6,11 +6,11 @@ public class Test03Sleep {
 
 	public static void main(String[] args) throws InterruptedException {
 		new Thread(() -> {
-			for (int i = 0; i < 50000000; i++)
+			for (int i = 0; i < 50_000_000; i++)
 				Test03Sleep.counter++;
 		}).start();
 
-		while (Test03Sleep.counter < 100000) {
+		while (Test03Sleep.counter < 100_000) {
 			System.out.println("Not reached yet");
 			 Thread.sleep(1000); // 1 SECOND
 		}
@@ -21,5 +21,5 @@ public class Test03Sleep {
 // reached yet? The answer is, we don’t know!
 
 // How many times does the while() loop execute in this revised class? (Thread.sleep(1000)) 
-//Still unknown! While polling does prevent the CPU from being overwhelmed with a
-// potentially in nite loop,
+// Still unknown! While polling does prevent the CPU from being overwhelmed with a
+// potentially infinite loop,

@@ -17,3 +17,7 @@ public class Test02ScheduledExecutorService {
 		// TimeUnit unit);
 	}
 }
+
+// The scheduleAtFixedRate() method creates a new task and submits it to the
+// executor every period, regardless of whether or not the previous task
+// finished.

@@ -25,5 +25,6 @@ public class SheepManager {
 }
 
 // 1 2 2 3 4 5 6 7 8 9  ( We know that we had 10 workers, but the results are incomplete and out of order.)
+// one of the increment operations actually being lost, with the last total being 9 instead of 10
 // 2 4 5 6 7 8 1 9 10 3
 // 2 1 3 4 5 6 7 8 9 10
