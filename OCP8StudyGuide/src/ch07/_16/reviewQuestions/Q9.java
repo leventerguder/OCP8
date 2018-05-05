@@ -23,6 +23,10 @@ public class Q9 extends MyTask {
 			System.out.println(a + "," + m + "," + b);
 			MyTask t1 = new Q9(elements, a, m);
 			int result = t1.fork().join();
+			// since the code calls join() immediately after fork(), causing the
+			// process to wait, it does not perform any faster if there are 100
+			// threads versus 1 thread,
+			// E. The class produces single-threaded performance at runtime.
 			return Math.min(new Q9(elements, m, b).compute(), result);
 		}
 	}

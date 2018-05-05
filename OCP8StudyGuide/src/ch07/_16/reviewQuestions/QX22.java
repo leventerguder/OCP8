@@ -22,5 +22,7 @@ public class QX22 {
 //			System.out.print(result.get() + " "); // n2
 //		}
 //		service.shutdown();
+		
+		IntStream.iterate(0, i->i+1).limit(5).forEach(System.out::println);
 	}
 }

@@ -20,4 +20,4 @@ public class Test08CopyOnWriteArrayList {
 	}
 }
 // These classes copy all of their elements to a new underlying structure
-// anytime an element is added, modi ed, or removed from the collection.
+// any time an element is added, modified, or removed from the collection.

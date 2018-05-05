@@ -13,3 +13,5 @@ public class QX20 {
 // D. Applications with many resource-heavy tasks tend to benefit more from
 // concurrency than ones with CPU-intensive tasks. (+)
 // E. Concurrent tasks do not share the same memory.
+
+// because single-processor CPUs have been benefiting from concurrency for decades

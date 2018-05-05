@@ -18,6 +18,7 @@ class CountNumbers extends RecursiveAction {
 	@Override
 	protected void compute() {
 		if (start < 0)
+			// The issue here is that the base condition is not reached since the numbers start/end are consistently positive
 			return;
 		else {
 			int middle = start + ((end - start) / 2);

@@ -11,6 +11,10 @@ public class QX17 {
 
 	public static void main(String[] args) throws InterruptedException {
 
+		// The key aspect to notice in the code is that a single-thread executor
+		// is used, meaning that no task will be executed concurrently.
+		// Therefore, the results are valid and predictable with 100 100 being
+		// the output
 		ExecutorService service = null;
 		try {
 			service = Executors.newSingleThreadExecutor();
@@ -22,8 +26,8 @@ public class QX17 {
 				});
 			//
 			Thread.sleep(100);
-			System.out.println(sheepCount1+" "+sheepCount2);
-			
+			System.out.println(sheepCount1 + " " + sheepCount2);
+
 		} finally {
 			if (service != null)
 				service.shutdown();

@@ -12,7 +12,7 @@ public class QX13 {
 		Stream<String> cats = Stream.of("leopard", "lynx", "ocelot", "puma").parallel();
 		Stream<String> bears = Stream.of("panda", "grizzly", "polar").parallel();
 		//
-		// the stream cre- ated by flatMap() is a new stream that is not
+		// the stream created by flatMap() is a new stream that is not
 		// parallel by default
 		ConcurrentMap<Boolean, List<String>> data = Stream.of(cats, bears).flatMap(s -> s)
 				.collect(Collectors.groupingByConcurrent(s -> !s.startsWith("p")));

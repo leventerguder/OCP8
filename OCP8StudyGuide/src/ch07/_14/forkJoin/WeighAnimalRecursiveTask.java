@@ -29,7 +29,10 @@ public class WeighAnimalRecursiveTask extends RecursiveTask<Double> {
 			System.out.println("[start=" + start + ",middle=" + middle + ",end=" + end + "]");
 			RecursiveTask<Double> otherTask = new WeighAnimalRecursiveTask(weights, start, middle);
 			otherTask.fork();
+			// The fork() method causes a new task to be submitted to the pool and is similar to the thread executor submit() method
 			return new WeighAnimalRecursiveTask(weights, middle, end).compute() + otherTask.join();
+			// The join() method is called after the fork() method and causes the current thread to wait for the results of a subtask.
+			// Unlike fork(), calling compute() within a compute() method causes the task to wait for the results of the subtask.
 		}
 		// Since the invokeAll() method doesn’t return a value, we instead issue
 		// a fork() and join() command to retrieve the recursive data

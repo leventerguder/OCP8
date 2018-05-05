@@ -7,6 +7,12 @@ public class Q2 {
 	}
 }
 
+// java.util.concurrent.Callable<V>
+// V call() throws Exception;
+
+// java.lang.Runnable
+// void run();
+
 // 2. Which of the following statements about the Callable call() and Runnable
 // run() methods are correct? (Choose all that apply.)
 

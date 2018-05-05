@@ -16,5 +16,13 @@ public class QX15 {
 	// G. () -> {System.out.println("Giraffe"); return 10;} (+)
 
 	public static void main(String[] args) {
+		// java.util.concurrent.Callable<V>
+		// V call() throws Exception
+		Callable c1 = () -> 5;
+		Callable c2 = () -> "The" + "Zoo";
+		Callable c3 = () -> {
+			System.out.println("Giraffe");
+			return 10;
+		};
 	}
 }
