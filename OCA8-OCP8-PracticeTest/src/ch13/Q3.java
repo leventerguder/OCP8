@@ -1,6 +1,6 @@
 package ch13;
 
-public class Q3_ {
+public class Q3 {
 
 }
 
@@ -12,7 +12,7 @@ public class Q3_ {
 // the line to check out the book and the book lookup to mark it as checked out,
 // respectively?
 
-// A. ArrayDeque, TreeMap
+// A. ArrayDeque, TreeMap (+)
 // B. ArrayDeque, TreeSet
 // C. ArrayList, TreeMap
 // D. ArrayList, TreeSet
