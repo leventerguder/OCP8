@@ -8,6 +8,9 @@ public class QX15 {
 
 		Stream<Character> stream = Stream.of('c', 'b', 'a');
 		stream.sorted().findAny().ifPresent(System.out::println);
-		// 
+		//
+		// The findAny() method is not guaranteed to return a specific
+		// element. Since we are not using parallelization, it is highly likely
+		// that the code will print a.
 	}
 }
