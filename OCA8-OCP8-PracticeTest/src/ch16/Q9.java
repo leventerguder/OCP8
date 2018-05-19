@@ -4,16 +4,19 @@ import java.io.IOException;
 
 public class Q9 {
 
-	public static void main(String[] args) throws IOException {
+	public void turnOn() throws IOException {
+		new IOException("Not ready");
+	}
 
-		try {
-			new Light().turnOn();
-		} catch (Exception b) {
-			System.out.println(b);
-			throw new IOException(); // y2
-		} finally {
-			System.out.println("complete");
-		}
+	public static void main(String[] b) throws Exception {
+	//		try {
+	//			new Light().turnOn();
+	//		} catch (RuntimeException b) { // y1 //duplicate parameter
+	//			System.out.println(b);
+	//			throw new IOException(); // y2
+	//		} finally {
+	//			System.out.println("complete");
+	//		}
 	}
 }
 
