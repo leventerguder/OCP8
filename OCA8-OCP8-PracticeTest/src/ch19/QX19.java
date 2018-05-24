@@ -16,3 +16,6 @@ public class QX19 {
 
 // java.lang.IllegalArgumentException: 'other' is different type of Path
 // D. None of the above
+
+// The relativize() method requires that both path values be absolute or
+// relative.

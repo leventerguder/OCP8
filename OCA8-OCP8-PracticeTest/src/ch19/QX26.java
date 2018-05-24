@@ -15,3 +15,5 @@ public class QX26 {
 		// compile error
 	}
 }
+// Since this checked exception is not handled inside the lambda expression, the
+// class does not compile. If

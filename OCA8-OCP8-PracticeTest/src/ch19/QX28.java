@@ -11,4 +11,4 @@ public class QX28 {
 		return p;
 	}
 }
-// The method compiles and returns a Path value that may not be equivalent to the input argument.
+// The method compiles and returns a Path value that is always equivalent to the input argument.

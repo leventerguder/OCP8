@@ -25,7 +25,7 @@ public class QX13 {
 }
 
 //	Which statement about the following class is correct?
-//A. The class compiles without issue.
+//A. The class compiles without issue. (+)
 //B. The class never throws an exception at runtime.
 //C. The implementation correctly copies a regular file.
 //D. All of the above

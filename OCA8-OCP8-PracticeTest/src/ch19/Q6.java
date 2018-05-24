@@ -11,7 +11,7 @@ public class Q6 {
 
 	public void setupInventory(Path desiredPath) throws Exception {
 		Path suggestedPath = Paths.get("sneakers");
-		if (Files.isSameFile(suggestedPath, desiredPath) // j1
+		if (Files.isSameFile(suggestedPath, desiredPath) // j1 //java.nio.file.NoSuchFileException
 				&& !Files.exists(suggestedPath))
 			Files.createDirectories(desiredPath); // j2
 	}

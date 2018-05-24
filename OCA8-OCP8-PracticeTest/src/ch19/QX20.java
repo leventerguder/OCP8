@@ -18,3 +18,7 @@ public class QX20 {
 
 // lost/blue.txt
 // lost/blue.txt/./found/../keys
+
+//First off, p2 is an absolute path, which means that p1.resolve(p2) just returns p2. For
+//this reason, Option B is incorrect. Since p1 is a relative path, it is appended onto p2, making
+//Option C correct and Option A incorrect
