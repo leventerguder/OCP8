@@ -16,5 +16,7 @@ public class QX37 {
 		System.out.println(y.relativize(x)); // Exception
 
 		// F. The code compiles but an exception is thrown at runtime.
+		
+		// relativize() method requires both Path values to be absolute or both to be relative
 	}
 }

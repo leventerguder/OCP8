@@ -12,9 +12,13 @@ class JavaProgrammerCert extends Exam {
 	private Exam ocp;
 	// assume getters and setters are here
 
-	// public boolean passed() {
-	// return super.passed();
-	// }
+//	 public boolean passed() {
+//		 return oca.passed() && ocp.passed();
+//	 }
+	 
+	 public boolean passed() {
+		 return oca.pass && ocp.pass;
+	 }
 	
 }
 

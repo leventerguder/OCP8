@@ -8,13 +8,17 @@ import java.util.concurrent.RecursiveTask;
 public class QX57 {
 
 	public static void main(String[] args) {
-		
+
 		ForkJoinPool pool = new ForkJoinPool();
 		ForkJoinTask<?> task = new PassButter(10);
 		System.out.print(pool.invoke(task));
 		pool.shutdown();
 	}
 }
+
+// the first task should
+// be started asynchronously with fork(). While that is processing, the second
+// task should be executed synchronously with compute()
 
 class PassButter extends RecursiveTask<String> {
 

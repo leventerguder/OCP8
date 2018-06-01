@@ -23,7 +23,11 @@ class QuickSolution {
 		int val1 = findFast(s1);
 		int val2 = findSlow(s2);
 		System.out.print(val1 + " " + val2);
-		
-		// 1 1
+
+		// The findFirst() method returns the first
+		// element in an ordered stream, whether it be serial or parallel.
+
+		// findAny() method may return the first element or any element in the
+		// stream, even on serial streams.
 	}
 }

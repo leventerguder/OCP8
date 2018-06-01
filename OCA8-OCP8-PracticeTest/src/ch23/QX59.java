@@ -10,4 +10,4 @@ public class QX59 {
 // Locale.setDefault(new Locale("en"));
 // ResourceBundle.getBundle("AB", new Locale("fr"));
 
-// 
+// E. AB_fr.properties, AB_en.properties, AB.class, AB.properties

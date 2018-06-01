@@ -13,3 +13,8 @@ public class Q2 {
 		// 59.140103
 	}
 }
+
+// m -> minute in hour
+// d -> day in month
+// h -> hour in am/pm
+// M -> month in year 

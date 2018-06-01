@@ -12,4 +12,4 @@ public class QX16 {
 // C. Only one of them contains a skip() method.
 // D. They are both abstract classes. (+)
 // E. They are both interfaces.
-// F. They can both be used to read character data.
+// F. They can both be used to read character data. (+)

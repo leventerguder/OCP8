@@ -15,10 +15,15 @@ public class QX50 {
 		Path t2 = Paths.get("/stars.exe");
 		Path t3 = t1.resolve(t2);
 
-		boolean b1 = t1.equals(t2);
-		boolean b2 = t1.normalize().equals(t2);
+		boolean b1 = t1.equals(t2); //false
+		boolean b2 = t1.normalize().equals(t2); //true
+		// The isSameFile() method will avoid checking the file system if the two Path expressions are
+		// equivalent in terms of equals()
 		boolean b3 = Files.isSameFile(t1.normalize(), t2);
 		boolean b4 = Files.isSameFile(t2, t3);
+	
+		//Passing an absolute
+		//Path to resolve() just returns it
 		
 		System.out.print(b1+","+b2+","+b3+","+b4);
 		

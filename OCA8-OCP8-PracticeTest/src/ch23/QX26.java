@@ -27,5 +27,6 @@ public class QX26 {
 		// Jump! is printed twice , The program hangs
 		// F. None of the above
 	}
-
+	// ExecutorService has up to four threads active , which is the same number of threads required to reach the CyclicBarrier limit.
+	// Therefore, the barrier limit is reached twice.
 }

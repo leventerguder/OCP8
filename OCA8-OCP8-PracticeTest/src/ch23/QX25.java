@@ -8,7 +8,7 @@ public class QX25 {
 // Which command causes the following class to throw an AssertionError at
 // runtime?
 
-// D. java -enableassert Watch
+// B. java -ea:Watch -da Watch
 
 class Watch {
 
