@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.function.Function;
 import java.util.function.IntFunction;
+import java.util.function.IntUnaryOperator;
 import java.util.function.UnaryOperator;
 
 public class UnaryOperatorTest01 {
@@ -13,7 +14,8 @@ public class UnaryOperatorTest01 {
 		//
 		Function<Integer, Integer> function1 = Math::abs;
 		IntFunction<Integer> intFunction1 = Math::abs;
-		UnaryOperator<Integer> intUnary = Math::abs;
+		UnaryOperator<Integer> unary = Math::abs;
+		IntUnaryOperator intUnary = Math::abs;
 		list.replaceAll(Math::abs);
 
 		System.out.println(list);
@@ -22,9 +24,8 @@ public class UnaryOperatorTest01 {
 
 // default void replaceAll(UnaryOperator<E> operator) {
 
-
 // UnaryOperator<T> extends Function<T,T>
 
-// IntUnaryOperator    ---> int applyAsInt(int)
-// LongUnaryOperator   ---> long applyAsLong(long)
+// IntUnaryOperator ---> int applyAsInt(int)
+// LongUnaryOperator ---> long applyAsLong(long)
 // DoubleUnaryOperator ---> double applyAsDouble(double)
