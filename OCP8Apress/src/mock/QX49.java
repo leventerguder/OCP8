@@ -6,7 +6,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-public class QX49_ {
+public class QX49 {
 
 	public static void main(String[] args) {
 

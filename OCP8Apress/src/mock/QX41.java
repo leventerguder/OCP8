@@ -25,5 +25,8 @@ public class QX41 {
 		InterfaceTwo<LocalDateTime> val2 = LocalDateTime::now;
 		// InterfaceThree<LocalDateTime> val3 = LocalDateTime::now;
 		// InterfaceFour<LocalDateTime> val4 = LocalDateTime::now;
+		
+        // System.out.println(val1.foo());
+        System.out.println(val2.foo());
 	}
 }

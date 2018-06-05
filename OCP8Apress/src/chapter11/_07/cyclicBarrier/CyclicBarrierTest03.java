@@ -15,7 +15,7 @@ public class CyclicBarrierTest03 {
 		Thread serviceOneThread = new Thread(new ServiceOne(barrier));
 		Thread serviceTwoThread = new Thread(new ServiceTwo(barrier));
 
-		System.out.println("Starting both the services at" + new Date());
+		System.out.println("Starting both the services at : " + new Date());
 
 		serviceOneThread.start();
 		serviceTwoThread.start();
