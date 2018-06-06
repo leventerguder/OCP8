@@ -17,6 +17,7 @@ public class ComputeIfXTest3 {
 
 		System.out.println(counts);
 
+		counts.put("Sam", 1);
 		counts.computeIfAbsent("Sam", (String key) -> null); // computeIfAbsent
 																// , Function
 
