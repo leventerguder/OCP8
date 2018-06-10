@@ -18,9 +18,9 @@ public class Test05TryWithResourcesSuppressed {
 
 		try (Dog dog = new Dog()) {
 			System.out.println("Dog# try block_2");
-			throw new IllegalStateException("Exception in try block!");
+			throw new IllegalArgumentException("Exception in try block!");
 			//
-		} catch (IllegalStateException e) {
+		} catch (IllegalArgumentException e) {
 			System.out.println(e.getMessage());
 
 			// Java remembers the suppressed exceptions that go with a primary
@@ -50,10 +50,10 @@ public class Test05TryWithResourcesSuppressed {
 		// Java closes resources in the reverse order from which it created them
 		try (Dog dog = new Dog(); Dog dog2 = new Dog()) {
 			System.out.println("Dog# try block_4");
-			throw new IllegalStateException("Exception in try block!");
+			throw new IllegalArgumentException("Exception in try block!");
 			// Keep in mind that the catch block looks for matches on the
 			// primary exception.
-		} catch (IllegalStateException e) {
+		} catch (IllegalArgumentException e) {
 			System.out.println(e.getMessage());
 
 			System.out.println("Suppressed : ");
