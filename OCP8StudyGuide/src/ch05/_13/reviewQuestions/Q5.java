@@ -33,4 +33,5 @@ public class Q5 {
 // 9: b.getString("age");
 
 // --> Dolly (Dolphins_fr.properties)
-// --> 4 (Dolphins_en.properties)
+// --> 0 (Dolphins.properties)
+// Once a bundle is chosen, only resources in that hierarchy are allowed.
