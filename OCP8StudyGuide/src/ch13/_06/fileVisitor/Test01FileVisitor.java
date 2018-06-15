@@ -17,7 +17,7 @@ public class Test01FileVisitor {
 	// java.nio.file.FileVisitor<T>
 	
 	// FileVisitor visitFile(T , BasicFileAttributes) throws IOException
-	// FileVisitor visitFileFailes(T , IOException ) throws IOException
+	// FileVisitor visitFileFailed(T , IOException ) throws IOException
 	// FileVisitor preVisitDirectory(T, BasicFileAttributes) throws IOException
 	// FileVisitor postVisitDirectory(T, IOException) throws IOException
 

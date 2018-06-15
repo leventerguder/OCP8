@@ -9,7 +9,7 @@ public class Test07ReentrantLock {
 	// and once in a separate thread using the tryLock method
 
 	// unlock() method must be called the same number of times as the lock()!
-	
+
 	public static void main(String[] args) {
 
 		Lock lock = new ReentrantLock();
@@ -20,6 +20,9 @@ public class Test07ReentrantLock {
 			lock.unlock();
 		}
 
+		// The previous example uses a separate thread to show that the first
+		// thread still holds the lock, making the lock unavailable to the
+		// second thread.
 		new Thread(() -> {
 
 			if (lock.tryLock()) {

@@ -17,7 +17,7 @@ public class Test02SimpleFileVisitor {
 		
 		Files.walkFileTree(path, new DeletePath());
 		//By itself FileVisitor instance does not actually do anything.
-		//Ir must be paired with Files.walkFileTree method.
+		//It must be paired with Files.walkFileTree method.
 	}
 }
 
