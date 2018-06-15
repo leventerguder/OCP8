@@ -1,4 +1,4 @@
-package ch13;
+package ch13._01.enhancing;
 
 public class Test03SwitchCase {
 
