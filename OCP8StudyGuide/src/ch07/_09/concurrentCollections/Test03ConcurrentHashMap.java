@@ -10,6 +10,8 @@ public class Test03ConcurrentHashMap {
 		Map<String, Integer> foodData = new ConcurrentHashMap<>();
 		foodData.put("zebra", 52);
 		foodData.put("elephant", 10);
+		// foodData.put("exception", null); //java.lang.NullPointerException
+		// ConcurrentHashMap doesn't allow null keys and null values
 		for (String key : foodData.keySet())
 			foodData.remove(key);
 	}
